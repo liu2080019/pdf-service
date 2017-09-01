@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+</head>
+<body>
+<div>
+    你是mdzz吗？？？
+</div>
+<form action="http://localhost:3000" method="post">
+    <input  type="text" name="content">
+    <input type="submit" value="submit">
+</form>
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(function () {
+      $('[name="content"]').val($('html')[0].outerHTML)
+    });
+</script>
+</body>
+</html>

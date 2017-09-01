@@ -1,0 +1,22 @@
+{
+  "name": "pdf-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@50.23.190.55:nj_shein_fed/pdf-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "koa": "^1.4.0",
+    "koa-bodyparser": "^2.5.0",
+    "puppeteer": "^0.10.1"
+  }
+}
