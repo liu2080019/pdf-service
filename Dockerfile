@@ -2,7 +2,7 @@ FROM zenato/puppeteer
 
 RUN mkdir -p /app
 
-COPY ./fonts/* /usr/share/fonts
+COPY fonts/ /usr/share/fonts
 
 COPY . /app
 
