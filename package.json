@@ -17,6 +17,6 @@
     "co": "^4.6.0",
     "koa": "^1.4.0",
     "koa-bodyparser": "^2.5.0",
-    "puppeteer": "^0.10.1"
+    "puppeteer": "^0.10.2"
   }
 }
