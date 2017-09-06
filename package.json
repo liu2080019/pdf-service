@@ -16,6 +16,7 @@
   "dependencies": {
     "co": "^4.6.0",
     "koa": "^1.4.0",
+
     "koa-body": "^1.6.0",
     "puppeteer": "^0.10.2"
   }
