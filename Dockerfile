@@ -2,7 +2,7 @@ FROM zenato/puppeteer
 
 RUN mkdir -p /app
 
-RUN apt-get update && apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei ttf-wqy-zenhei  xfonts-wqy
+COPY ./fonts/* /usr/share/fonts
 
 COPY . /app
 
