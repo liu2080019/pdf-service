@@ -8,14 +8,35 @@
 <div>
     你是mdzz吗？？？
 </div>
-<form action="http://localhost:3000" method="post">
+<form action="http://39.108.223.20/" method="post">
     <input  type="text" name="content">
     <input type="submit" value="submit">
 </form>
+
+<button id="btn">点我,zz</button>
 <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script>
+    function submit(url, content) {
+      var form = document.createElement('form');
+      form.action = url;
+      form.target = '_blank';
+      form.method= 'post';
+      var input = document.createElement('input');
+      input.name = 'content';
+      input.value = encodeURIComponent(content);
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+    }
     $(function () {
-      $('[name="content"]').val($('html')[0].outerHTML)
+      $('[name="content"]').val($('html')[0].outerHTML);
+
+      $('#btn').click(function () {
+        setTimeout(function () {
+
+          submit('http://localhost:3000', $('html')[0].outerHTML)
+        }, 1000)
+      })
     });
 </script>
 </body>

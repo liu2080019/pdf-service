@@ -12,7 +12,7 @@ let browser = null;
 
 function getBrowser() {
   if (!browser) {
-    return puppeteer.launch().then(br => {
+    return puppeteer.launch({ args: ['--no-sandbox'] }).then(br => {
       browser = br;
       return br;
     });
