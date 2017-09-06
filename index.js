@@ -41,8 +41,7 @@ app.use(function *() {
   refCount++;
   yield page.goto('about:blank');
   const content = this.request.body.content || this.request.body.fields ? this.request.body.fields.content: defaultContent;
-  yield page.setContent(content);
-  yield page.waitForNavigation({ waitUntil: 'load' });
+  yield Promise.all([page.setContent(content), page.waitForNavigation({ waitUntil: 'load' })]);
   this.type = 'application/pdf';
   this.body = yield page.pdf({ format: 'A4' });
   page.close();
