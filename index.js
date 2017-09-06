@@ -1,6 +1,8 @@
 /**
  * Created by fed on 2017/9/1.
  */
+const fs = require('fs');
+const path = require('path');
 const koa = require('koa');
 const bodyParser = require('koa-body');
 const puppeteer = require('puppeteer');
@@ -9,6 +11,8 @@ const app = koa();
 
 let refCount = 0;
 let browser = null;
+
+const defaultContent = fs.readFileSync(path.join(__dirname, 'default.html'), 'utf8');
 
 function getBrowser() {
   if (!browser) {
@@ -36,9 +40,9 @@ app.use(function *() {
   const page = yield browser.newPage();
   refCount++;
   yield page.goto('about:blank');
-  const content = this.request.body.content || this.request.body.fields ? this.request.body.fields.content: '';
+  const content = this.request.body.content || this.request.body.fields ? this.request.body.fields.content: defaultContent;
   yield page.setContent(content);
-  yield page.waitForNavigation({ waitUntil: 'load' })
+  yield page.waitForNavigation({ waitUntil: 'load' });
   this.type = 'application/pdf';
   this.body = yield page.pdf({ format: 'A4' });
   page.close();
