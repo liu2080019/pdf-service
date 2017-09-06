@@ -35,6 +35,7 @@ app.use(function *() {
   refCount++;
   yield page.goto('about:blank');
   yield page.setContent(this.request.body.content);
+  yield page.waitForNavigation({ waitUntil: 'load' })
   this.type = 'application/pdf';
   this.body = yield page.pdf({ format: 'A4' });
   page.close();
