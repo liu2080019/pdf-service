@@ -24,12 +24,13 @@ function getBrowser() {
   return Promise.resolve(browser);
 }
 
-setInterval(() => {
-  if (refCount === 0) {
-    browser.close();
-    browser = null;
-  }
-}, 10 * 60 * 1000);
+getBrowser();
+// setInterval(() => {
+//   if (refCount === 0) {
+//     browser.close();
+//     browser = null;
+//   }
+// }, 10 * 60 * 1000);
 
 app.use(bodyParser({
   multipart: true,
