@@ -17,7 +17,7 @@ RUN npm i
 RUN apt-get update -y && apt-get install -y cron
 
 # Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/hello-cron
+RUN chmod 0644 /app/crontab
 
 RUN touch /var/log/cron.log
 
