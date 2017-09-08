@@ -8,17 +8,17 @@ COPY . /app
 
 WORKDIR /app
 
+RUN echo "Asia/Shanghai" > /etc/timezone
+
 RUN npm i -g pm2
 
 RUN npm i
 
 RUN apt-get update -y && apt-get install -y cron
 
-ADD crontab /etc/cron.d/hello-cron
-
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/hello-cron
 
 RUN touch /var/log/cron.log
 
-CMD cron && pm2-docker -i 4 index.js
+CMD crontab /app/crontab && pm2-docker -i 4 index.js
