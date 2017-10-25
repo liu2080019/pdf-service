@@ -21,4 +21,4 @@ RUN chmod 0644 /app/crontab
 
 RUN touch /var/log/cron.log
 
-CMD crontab /app/crontab && pm2-docker -i 4 index.js
+CMD crontab /app/crontab && pm2-docker index.js

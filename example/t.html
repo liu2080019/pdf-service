@@ -1,935 +1,1210 @@
 
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="expanded">
 <head>
-    <meta charset="utf-8">
-    <link rel="dns-prefetch" href="https://assets-cdn.github.com">
-    <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
-    <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
-    <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
-    <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
-    <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-    <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
 
-    <meta content="origin-when-cross-origin" name="referrer" />
-
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-7db951ed87f8f6cbd3a9e89c294e300cf23c1a83ad7ae64c70b8f99b21031340.css" integrity="sha256-fblR7Yf49svTqeicKU4wDPI8GoOteuZMcLj5myEDE0A=" media="all" rel="stylesheet" />
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-4b2158409cc56f58dafd534ae676475b1bfe7cb057c415e2c5984e3c13b041e5.css" integrity="sha256-SyFYQJzFb1ja/VNK5nZHWxv+fLBXxBXixZhOPBOwQeU=" media="all" rel="stylesheet" />
-
-
-
-
-
-    <meta name="viewport" content="width=device-width">
-
-    <title>Ubuntu 安装中文字体</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-    <link rel="fluid-icon" href="https://gist.github.com/fluidicon.png" title="GitHub">
-    <meta property="fb:app_id" content="1401488693436528">
-
-
-    <meta content="https://avatars0.githubusercontent.com/u/122213?v=4&amp;s=400" property="og:image" /><meta content="Gist" property="og:site_name" /><meta content="object" property="og:type" /><meta content="Ubuntu 安装中文字体" property="og:title" /><meta content="https://gist.github.com/allex/11203573" property="og:url" /><meta content="Ubuntu 安装中文字体" property="og:description" />
-
-    <link rel="assets" href="https://assets-cdn.github.com/">
-    <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MTQ0MjgwNTQxOmU2NTc4YTYzNDUzMTUzYjZiNDFiMmQ5NzU0NTdhZWM5ZDNjMWIyZjBkYTdhOTNlYjk3NGNhOGY3ODU5NjFiODI=--9a129e188aff4a35024701d33bb91a324e62536e">
-    <meta name="pjax-timeout" content="1000">
-    <link rel="sudo-modal" href="/sessions/sudo_modal">
-    <meta name="request-id" content="9E82:4704:40DA2E6:736F0A0:59AF69BB" data-pjax-transient>
-
-
-    <meta name="selected-link" value="gist_code" data-pjax-transient>
-
-    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-    <meta name="google-analytics" content="UA-3769691-4">
-
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="gist" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="9E82:4704:40DA2E6:736F0A0:59AF69BB" name="octolytics-dimension-request_id" /><meta content="iad" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" /><meta content="5894477" name="octolytics-actor-id" /><meta content="renaesop" name="octolytics-actor-login" /><meta content="10ae748a9e58557cf1b01216d9265d5ab458b343f25462fd114495244d73afb8" name="octolytics-actor-hash" />
-    <meta content="/&lt;user-name&gt;/&lt;gist-id&gt;" data-pjax-transient="true" name="analytics-location" />
-
-
-
-
-    <meta class="js-ga-set" name="dimension1" content="Logged In">
-
-
-
-    <meta content="true" name="octolytics-dimension-public" /><meta content="11203573" name="octolytics-dimension-gist_id" /><meta content="11203573" name="octolytics-dimension-gist_name" /><meta content="false" name="octolytics-dimension-anonymous" /><meta content="122213" name="octolytics-dimension-owner_id" /><meta content="allex" name="octolytics-dimension-owner_login" /><meta content="false" name="octolytics-dimension-forked" />
-
-    <meta class="js-ga-set" name="dimension5" content="public">
-    <meta class="js-ga-set" name="dimension6" content="owned">
-    <meta class="js-ga-set" name="dimension7" content="markdown">
-
-
-    <meta name="hostname" content="gist.github.com">
-    <meta name="user-login" content="renaesop">
-
-    <meta name="expected-hostname" content="gist.github.com">
-    <meta name="js-proxy-site-detection-payload" content="ODM1NGNiMTcyMTg3Y2Q3MTY0N2YyODZjMzA5YTYwYjI5OTU3Y2IwMzgyY2ZjZTVmYjAwYmRmNGEyZjE4MjBkY3x7InJlbW90ZV9hZGRyZXNzIjoiMTM4LjEyOC4yMTguOTMiLCJyZXF1ZXN0X2lkIjoiOUU4Mjo0NzA0OjQwREEyRTY6NzM2RjBBMDo1OUFGNjlCQiIsInRpbWVzdGFtcCI6MTUwNDY2ODA5MiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
-
-    <meta name="enabled-features" content="UNIVERSE_BANNER">
-
-    <meta name="html-safe-nonce" content="d75802decd0cb4846cc777a747ec2a523e8cfb35">
-
-    <meta http-equiv="x-pjax-version" content="7f43de23603462da980a81f912c2e93e">
-
-
-    <link href="/allex.atom" rel="alternate" title="atom" type="application/atom+xml">
-
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/gist-a048a4bb52579456a311c5c5b5714d20a9f4e876138bdce7724e1a829cb48a82.css" integrity="sha256-oEiku1JXlFajEcXFtXFNIKn06HYTi9znck4agpy0ioI=" media="all" rel="stylesheet" />
-
-
-
-
-    <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-
-    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-
-    <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
-    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-
-    <meta name="theme-color" content="#1e2327">
-
-
-    <meta name="u2f-support" content="true">
-
-</head>
-
-<body class="logged-in env-production emoji-size-boost">
-
-
-<div class="position-relative js-header-wrapper ">
-    <a href="#start-of-content" tabindex="1" class="bg-black text-white p-3 show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
-
-
-
-
-
-
-
-    <div class="Header gist-header header-logged-in" role="banner">
-        <div class="container-lg px-3 clearfix">
-            <div class="d-flex flex-justify-between">
-                <div class="d-flex">
-                    <a href="/" aria-label="Gist Homepage" class="header-logo-wordmark" data-hotkey="g d">
-                        <svg aria-hidden="true" class="octicon octicon-logo-github" height="28" version="1.1" viewBox="0 0 45 16" width="78"><path fill-rule="evenodd" d="M18.53 12.03h-.02c.009 0 .015.01.024.011h.006l-.01-.01zm.004.011c-.093.001-.327.05-.574.05-.78 0-1.05-.36-1.05-.83V8.13h1.59c.09 0 .16-.08.16-.19v-1.7c0-.09-.08-.17-.16-.17h-1.59V3.96c0-.08-.05-.13-.14-.13h-2.16c-.09 0-.14.05-.14.13v2.17s-1.09.27-1.16.28c-.08.02-.13.09-.13.17v1.36c0 .11.08.19.17.19h1.11v3.28c0 2.44 1.7 2.69 2.86 2.69.53 0 1.17-.17 1.27-.22.06-.02.09-.09.09-.16v-1.5a.177.177 0 0 0-.146-.18zm23.696-2.2c0-1.81-.73-2.05-1.5-1.97-.6.04-1.08.34-1.08.34v3.52s.49.34 1.22.36c1.03.03 1.36-.34 1.36-2.25zm2.43-.16c0 3.43-1.11 4.41-3.05 4.41-1.64 0-2.52-.83-2.52-.83s-.04.46-.09.52c-.03.06-.08.08-.14.08h-1.48c-.1 0-.19-.08-.19-.17l.02-11.11c0-.09.08-.17.17-.17h2.13c.09 0 .17.08.17.17v3.77s.82-.53 2.02-.53l-.01-.02c1.2 0 2.97.45 2.97 3.88zm-8.72-3.61H33.84c-.11 0-.17.08-.17.19v5.44s-.55.39-1.3.39-.97-.34-.97-1.09V6.25c0-.09-.08-.17-.17-.17h-2.14c-.09 0-.17.08-.17.17v5.11c0 2.2 1.23 2.75 2.92 2.75 1.39 0 2.52-.77 2.52-.77s.05.39.08.45c.02.05.09.09.16.09h1.34c.11 0 .17-.08.17-.17l.02-7.47c0-.09-.08-.17-.19-.17zm-23.7-.01h-2.13c-.09 0-.17.09-.17.2v7.34c0 .2.13.27.3.27h1.92c.2 0 .25-.09.25-.27V6.23c0-.09-.08-.17-.17-.17zm-1.05-3.38c-.77 0-1.38.61-1.38 1.38 0 .77.61 1.38 1.38 1.38.75 0 1.36-.61 1.36-1.38 0-.77-.61-1.38-1.36-1.38zm16.49-.25h-2.11c-.09 0-.17.08-.17.17v4.09h-3.31V2.6c0-.09-.08-.17-.17-.17h-2.13c-.09 0-.17.08-.17.17v11.11c0 .09.09.17.17.17h2.13c.09 0 .17-.08.17-.17V8.96h3.31l-.02 4.75c0 .09.08.17.17.17h2.13c.09 0 .17-.08.17-.17V2.6c0-.09-.08-.17-.17-.17zM8.81 7.35v5.74c0 .04-.01.11-.06.13 0 0-1.25.89-3.31.89-2.49 0-5.44-.78-5.44-5.92S2.58 1.99 5.1 2c2.18 0 3.06.49 3.2.58.04.05.06.09.06.14L7.94 4.5c0 .09-.09.2-.2.17-.36-.11-.9-.33-2.17-.33-1.47 0-3.05.42-3.05 3.73s1.5 3.7 2.58 3.7c.92 0 1.25-.11 1.25-.11v-2.3H4.88c-.11 0-.19-.08-.19-.17V7.35c0-.09.08-.17.19-.17h3.74c.11 0 .19.08.19.17z"/></svg>
-                        <svg aria-hidden="true" class="octicon octicon-logo-gist" height="28" version="1.1" viewBox="0 0 25 16" width="40"><path fill-rule="evenodd" d="M4.7 8.73h2.45v4.02c-.55.27-1.64.34-2.53.34-2.56 0-3.47-2.2-3.47-5.05 0-2.85.91-5.06 3.48-5.06 1.28 0 2.06.23 3.28.73V2.66C7.27 2.33 6.25 2 4.63 2 1.13 2 0 4.69 0 8.03c0 3.34 1.11 6.03 4.63 6.03 1.64 0 2.81-.27 3.59-.64V7.73H4.7v1zm6.39 3.72V6.06h-1.05v6.28c0 1.25.58 1.72 1.72 1.72v-.89c-.48 0-.67-.16-.67-.7v-.02zm.25-8.72c0-.44-.33-.78-.78-.78s-.77.34-.77.78.33.78.77.78.78-.34.78-.78zm4.34 5.69c-1.5-.13-1.78-.48-1.78-1.17 0-.77.33-1.34 1.88-1.34 1.05 0 1.66.16 2.27.36v-.94c-.69-.3-1.52-.39-2.25-.39-2.2 0-2.92 1.2-2.92 2.31 0 1.08.47 1.88 2.73 2.08 1.55.13 1.77.63 1.77 1.34 0 .73-.44 1.42-2.06 1.42-1.11 0-1.86-.19-2.33-.36v.94c.5.2 1.58.39 2.33.39 2.38 0 3.14-1.2 3.14-2.41 0-1.28-.53-2.03-2.75-2.23h-.03zm8.58-2.47v-.86h-2.42v-2.5l-1.08.31v2.11l-1.56.44v.48h1.56v5c0 1.53 1.19 2.13 2.5 2.13.19 0 .52-.02.69-.05v-.89c-.19.03-.41.03-.61.03-.97 0-1.5-.39-1.5-1.34V6.94h2.42v.02-.01z"/></svg>
-                    </a>
-                    <div class="site-search js-site-search" role="search">
-                        <div class="header-search" role="search">
-
-                            <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/search" class="position-relative js-quicksearch-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-                            <label class="header-search-wrapper form-control js-chromeless-input-container">
-                                <input type="text"
-                                       class="form-control js-site-search-focus header-search-input js-navigation-enable js-quicksearch-field"
-                                       data-hotkey="s"
-                                       name="q"
-                                       placeholder="Search…"
-                                       tabindex="1"
-                                       autocorrect="off"
-                                       autocomplete="off"
-                                       autocapitalize="off">
-                            </label>
-
-                            <div class="gist-quicksearch-results js-quicksearch-results js-navigation-container" data-quicksearch-url="/search/quick"></div>
-                        </form></div>
-
-                    </div>
-
-                    <ul class="list-style-none d-flex flex-items-center text-bold pl-2" role="navigation">
-                        <li><a href="/discover" class="HeaderNavlink px-2" data-ga-click="Header, go to all gists, text:all gists">All gists</a></li>
-                        <li><a href="https://github.com" class="HeaderNavlink px-2" data-ga-click="Header, go to GitHub, text:GitHub">GitHub</a></li>
-                    </ul>
-                </div>
-
-                <ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
-                    <li><a href="/" class="HeaderNavlink text-bold pr-3" data-ga-click="Header, go to new gist, text:new gist">New gist</a></li>
-                    <li class="dropdown js-menu-container">
-                        <button class="btn-link HeaderNavlink name tooltipped tooltipped-sw js-menu-target"
-                                type="button"
-                                aria-label="View profile and more"
-                                aria-expanded="false"
-                                aria-haspopup="true"
-                                data-ga-click="Header, show menu, icon:avatar">
-                            <img alt="@renaesop" class="avatar" height="20" src="https://avatars1.githubusercontent.com/u/5894477?v=4&amp;s=40" width="20" />
-                            <span class="dropdown-caret"></span>
-                        </button>
-
-                        <div class="dropdown-menu-content js-menu-content">
-                            <div class="dropdown-menu dropdown-menu-sw">
-                                <div class="dropdown-header header-nav-current-user css-truncate">
-                                    Signed in as <strong class="css-truncate-target">renaesop</strong>
-                                </div>
-                                <div class="dropdown-divider"></div>
-
-                                <a class="dropdown-item" href="/renaesop" data-ga-click="Header, go to your gists, text:your gists">
-                                    Your gists
-                                </a>
-
-                                <a class="dropdown-item" href="/renaesop/starred" data-ga-click="Header, go to starred gists, text:starred gists">
-                                    Starred gists
-                                </a>
-
-                                <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
-                                    Help
-                                </a>
-
-                                <div class="dropdown-divider"></div>
-
-                                <a class="dropdown-item" href="https://github.com/renaesop" data-ga-click="Header, go to profile, text:your profile">
-                                    Your GitHub profile
-                                </a>
-
-                                <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="https://gist.github.com/auth/github/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TWNgo/IQc3kZsatMJPy95I4tPHGcdLi5VV/pLfu+iQETOat+shOFtsHFOmhcf6v+W3clLuienNtxGUaCMI6WnA==" /></div>
-                                <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
-                                    Sign out
-                                </button>
-                            </form>              </div>
+    <!--STATUS OK-->
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="dns-prefetch" href="//box.bdimg.com">
+
+    <title>百度新闻搜索——全球最大的中文新闻平台</title>
+    <meta name="description" content="百度新闻是包含海量资讯的新闻服务平台，真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等，快速了解它们的最新进展。" >
+    <script type="text/javascript"> window.NEWSLOGURL = 'http://log.news.baidu.com/v.gif'; window.HUNTERLOGURL = 'http://log.news.baidu.com/u.gif'; window._hmt = window._hmt || [];</script>
+    <script type="text/javascript" src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/resource/js/usermonitor_c85d902.js?v=1.2"></script>
+
+    <script src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/news/js/jquery-1.8.3.min_a6ffa58.js" type="text/javascript"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/module_static_include/module_static_include_18bc987.css"/><link rel="stylesheet" type="text/css" href="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/news/focustop/focustop_3deb958.css"/></head>
+<body>
+<div id="header-wrapper" class="clearfix">
+    <div id="usrbar" alog-group="userbar" alog-alias="hunter-userbar-start"></div>
+    <ul id="header-link-wrapper" class="clearfix">
+        <li><a href="https://www.baidu.com/" data-path="s?wd=">网页</a></li>
+        <li style="margin-left:21px;"><span>新闻</span></li>
+        <li><a href="http://tieba.baidu.com/" data-path="f?kw=">贴吧</a></li>
+        <li><a href="https://zhidao.baidu.com/" data-path="search?ct=17&pn=0&tn=ikaslist&rn=10&lm=0&word=">知道</a></li>
+        <li><a href="http://music.baidu.com/" data-path="search?fr=news&ie=utf-8&key=">音乐</a></li>
+        <li><a href="http://image.baidu.com/" data-path="search/index?ct=201326592&cl=2&lm=-1&tn=baiduimage&istype=2&fm=&pv=&z=0&word=">图片</a></li>
+        <li><a href="http://v.baidu.com/" data-path="v?ct=3019898888&ie=utf-8&s=2&word=">视频</a></li>
+        <li><a href="http://map.baidu.com/" data-path="?newmap=1&ie=utf-8&s=s%26wd%3D">地图</a></li>
+        <li><a href="http://wenku.baidu.com/" data-path="search?ie=utf-8&word=">文库</a></li>
+        <div class="header-divider"></div>
+    </ul>
+</div>
+<div id="app_tooltip_qrcode">
+    <img src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/img/show_top_qrcode/img/1014720j_63c8044.png">
+</div>
+<div id="headerwrapper">
+    <div id="header" alog-group="header" alog-alias="hunter-header-start">
+
+        <form action="http://news.baidu.com/ns" name="fbaidu" class="sbox">
+            <table class="sbox" alog-group="search-box">
+                <tr>
+                    <td class="logo">
+                        <div class="logo">
+                            <a href="http://news.baidu.com/view.html">
+                                <!--[if !IE]><!--><img src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png" alt="百度新闻" height="46px" width="137px"><!--<![endif]-->
+                                <!--[if IE 6]><img src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_for_ie6_1597c18.png" alt="百度新闻" height="46px" width="137px"><![endif]-->
+                                <!--[if gt IE 6]><img src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png" alt="百度新闻" height="46px" width="137px"><![endif]-->
+                            </a>
                         </div>
-                    </li>
+                        <div class="date"></div>
+                    </td>
+                    <td class="search">
+                        <table>
+                            <tr>
+                                <td class="box"><div id="sugarea"><span class="s_ipt_wr" id="s_ipt_wr"><input class="word" id="ww" name="word" size="42"  maxlength="100" tabindex="1"></span><span class="s_btn_wr"><input class="btn" type="submit" value="百度一下" onmousedown="this.className='btn s_btn_h'" onmouseout="this.className='btn'"></span></div></td>
+                                <td class="help"><a href="http://www.baidu.com/search/news_help.html">帮助</a><a href="http://news.baidu.com/advanced_news.html">高级搜索</a><a href="http://news.baidu.com/pianhao.html">设置</a></td>
+                            </tr>
+                        </table>
+                        <p class="search-radios">
+                            <input type="radio" name="tn" value="news" checked="checked" id="news">
+                            <label for="news" class="checked">新闻全文</label>
+                            <input type="radio" name="tn" value="newstitle" id="newstitle">
+                            <label for="newstitle" class="not-checked">新闻标题</label>
+                        </p>
+                        <input type="hidden" name="from" value="news">
+                        <input type="hidden" name="cl" value="2">
+                        <input type="hidden" name="rn" value="20">
+                        <input type="hidden" name="ct" value="1">
+                    </td></tr>
+            </table>
+        </form>
+
+    </div>
+
+    <div id="menu" class="mod-navbar" alog-group="home-menu">
+        <div id="channel-shanghai" class="channel-shanghai clearfix"  style="display:none" >
+            <div class="menu-list">
+                <ul class="clearfix">
+                    <li class="navitem-index current active"><a href="/">首页</a></li>
+                    <li class="icon-new-wrapper"><a href="https://baijia.baidu.com/" id="nav-hot-link" target="_blank">百家号</a></li>
+                    <li ><a href="/guonei">国内</a></li>
+                    <li ><a href="/guoji">国际</a></li>
+                    <li ><a href="/mil">军事</a></li>
+                    <li ><a href="/society">社会</a></li>
+                    <li ><a href="/finance">财经</a></li>
+                    <li ><a href="/ent">娱乐</a></li>
+                    <li ><a href="/sports">体育</a></li>
+                    <li ><a href="/internet">互联网</a></li>
+                    <li ><a href="/tech">科技</a></li>
+                    <li ><a href="/game">游戏</a></li>
+                    <li ><a href="/fashion">时尚</a></li>
+                    <li ><a href="/lady">女人</a></li>
+                    <li ><a href="/auto">汽车</a></li>
+                    <li ><a href="/house">房产</a></li>
+                    <li><a href="http://jian.news.baidu.com/" target="_blank">个性推荐</a></li>
                 </ul>
             </div>
+            <i class="slogan"></i>
+        </div>
+        <div id="channel-all" class="channel-all clearfix" >
+            <div class="menu-list">
+                <ul class="clearfix">
+                    <li class="navitem-index current active"><a href="/">首页</a></li>
+                    <li class="icon-new-wrapper"><a href="https://baijia.baidu.com/" id="nav-hot-link" target="_blank">百家号</a></li>
+                    <li ><a href="/guonei">国内</a></li>
+                    <li ><a href="/guoji">国际</a></li>
+                    <li ><a href="/mil">军事</a></li>
+                    <li ><a href="/society">社会</a></li>
+                    <li ><a href="/finance">财经</a></li>
+                    <li ><a href="/ent">娱乐</a></li>
+                    <li ><a href="/sports">体育</a></li>
+                    <li ><a href="/internet">互联网</a></li>
+                    <li ><a href="/tech">科技</a></li>
+                    <li ><a href="/game">游戏</a></li>
+                    <li ><a href="/fashion">时尚</a></li>
+                    <li ><a href="/lady">女人</a></li>
+                    <li ><a href="/auto">汽车</a></li>
+                    <li ><a href="/house">房产</a></li>
+                    <li><a href="http://jian.news.baidu.com/" target="_blank">个性推荐</a></li>
+                </ul>
+            </div>
+            <i class="slogan"></i>
         </div>
     </div>
 
-
-
-
-
 </div>
+<div id="body" alog-alias="b">
 
-<div id="start-of-content" class="show-on-focus"></div>
-
-<div id="js-flash-container">
-</div>
-
-
-
-<div role="main">
-    <div itemscope itemtype="http://schema.org/Code">
-        <div id="gist-pjax-container" class="gist-content-wrapper" data-pjax-container>
-
-
-
-
-
-            <div class="gisthead pagehead repohead instapaper_ignore readability-menu experiment-repo-nav mb-4">
-                <div class="container">
-
-
-                    <div class="container repohead-details-container">
-
-                        <ul class="pagehead-actions">
-
-
-                            <li>
-
-                                <div class="js-toggler-container js-social-container starring-container ">
-                                    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/allex/11203573/unstar" class="starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="HjZXtdChWVNUHI3etzOXesO3oQTqPUGcAdt94SCAGxijyE2VZakSY0zQqUMaTjBHoPXJVWkKyxV1v8oACJN4CA==" /></div>
-                                    <button
-                                            type="submit"
-                                            class="btn btn-sm btn-with-count js-toggler-target"
-                                            aria-label="Unstar this gist" title="Unstar allex/11203573"
-                                            data-ga-click="Repository, click unstar button, action:gists/gists#show; text:Unstar">
-                                        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
-                                        Unstar
-                                    </button>
-                                    <a class="social-count js-social-count" href="/allex/11203573/stargazers"
-                                       aria-label="33 users starred this repository">
-                                        33
-                                    </a>
-                                </form>
-                                    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/allex/11203573/star" class="unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NXo/z3NryJ+vANEGjlXbAFbbsFjdLuTQXrfr7CmOzUO3YrqRZJpP21TmqrbGWyBCxLUS8passkqHYDUn0Vnx/g==" /></div>
-                                    <button
-                                            type="submit"
-                                            class="btn btn-sm btn-with-count js-toggler-target"
-                                            aria-label="Star this gist" title="Star allex/11203573"
-                                            data-ga-click="Repository, click star button, action:gists/gists#show; text:Star">
-                                        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
-                                        Star
-                                    </button>
-                                    <a class="social-count js-social-count" href="/allex/11203573/stargazers"
-                                       aria-label="33 users starred this repository">
-                                        33
-                                    </a>
-                                </form>  </div>
-
-
-                            </li>
-
-                            <li>
-                                <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/allex/11203573/fork" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7rRqWFQr2hF7xlDT54gtEbOk7km2KUY/wpKAkxg90/42O3OX4CvGemZmEvNZq8voOPKS/IyStADe9snHZNvOIA==" /></div>
-                                <button class="btn btn-sm btn-with-count" type="submit">
-                                    <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-                                    Fork
-                                </button>
-                                <a class="social-count js-social-count"
-                                   href="/allex/11203573/forks"
-                                   aria-label="13 users forked this gist">
-                                    13
-                                </a>
-                            </form>
-                            </li>
-                        </ul>
-
-                        <h1 class="public css-truncate">
-                            <img alt="@allex" class="avatar gist-avatar" height="26" src="https://avatars3.githubusercontent.com/u/122213?v=4&amp;s=52" width="26" />
-                            <span class="author"><a href="/allex" class="url fn" rel="author"><span itemprop="author">allex</span></a></span><!--
-        --><span class="path-divider">/</span><!--
-        --><strong itemprop="name" class="gist-header-title css-truncate-target"><a href="/allex/11203573">gist:11203573</a></strong>
-
-                            <div class="d-block text-small text-gray">
-                                Last active <time-ago datetime="2017-07-18T04:47:24Z">Jul 18, 2017</time-ago>
-                                &bull;
-                                <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/allex/11203573/report" class="inline-form" method="post"><div><input aria-label="Report gist as abuse" class="btn-link text-red" data-confirm="Do you want to report the contents of this gist as abuse?" type="submit" value="Report gist" /><input name="authenticity_token" type="hidden" value="Ucg9DATbzgHMcbNz3KFRiwkQDEbTGVBeRZ05tl/Wkl5GYuQavmmEKGYZpghU+1B0L0EMwpbwzJP5E/LTUMcG+A==" /></div></form>
-                            </div>
-                        </h1>
-                    </div>
-
-                    <div class="container gist-file-navigation">
-                        <div class="float-right file-navigation-options" data-multiple>
-
-                            <div class="file-navigation-option">
-                                <input type="hidden" name="protocol_type" value="clone">
-
-                                <div class="select-menu js-menu-container js-select-menu">
-                                    <div class="input-group js-select-button js-zeroclipboard-container">
-                                        <div class="input-group-button">
-                                            <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone Embed, location:repo overview" aria-expanded="false" aria-haspopup="true">
-                                                Embed
-                                            </button>
-                                        </div>
-                                        <input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="&lt;script src=&quot;https://gist.github.com/allex/11203573.js&quot;&gt;&lt;/script&gt;" aria-label="Clone this repository at &lt;script src=&quot;https://gist.github.com/allex/11203573.js&quot;&gt;&lt;/script&gt;" readonly>
-                                        <div class="input-group-button">
-                                            <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="select-menu-modal-holder">
-                                        <div class="select-menu-modal js-menu-content">
-                                            <div class="select-menu-header">
-                                                <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-                                                <span class="select-menu-title">What would you like to do?</span>
-                                            </div>
-
-                                            <div class="select-menu-list js-navigation-container" role="menu">
-                                                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
-                                                    <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
-                                                    <div class="select-menu-item-text">
-                                                        <input type="radio" name="protocol_selector" value="embed" checked>
-                                                        <span class="select-menu-item-heading">
-
-                  Embed
-                </span>
-                                                        <span class="description">
-                    Embed this gist in your website.
-                  </span>
-                                                        <span class="js-select-button-text hidden-select-button-text">
-                  <div class="input-group-button">
-  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone Embed, location:repo overview" aria-expanded="false" aria-haspopup="true">
-    Embed
-  </button>
-</div>
-<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="&lt;script src=&quot;https://gist.github.com/allex/11203573.js&quot;&gt;&lt;/script&gt;" aria-label="Clone this repository at &lt;script src=&quot;https://gist.github.com/allex/11203573.js&quot;&gt;&lt;/script&gt;" readonly>
-<div class="input-group-button">
-  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
-</div>
-
-                </span>
-                                                    </div>
-                                                </div>
-                                                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-                                                    <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
-                                                    <div class="select-menu-item-text">
-                                                        <input type="radio" name="protocol_selector" value="share" >
-                                                        <span class="select-menu-item-heading">
-
-                  Share
-                </span>
-                                                        <span class="description">
-                    Copy sharable URL for this gist.
-                  </span>
-                                                        <span class="js-select-button-text hidden-select-button-text">
-                  <div class="input-group-button">
-  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone Share, location:repo overview" aria-expanded="false" aria-haspopup="true">
-    Share
-  </button>
-</div>
-<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://gist.github.com/allex/11203573" aria-label="Clone this repository at https://gist.github.com/allex/11203573" readonly>
-<div class="input-group-button">
-  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
-</div>
-
-                </span>
-                                                    </div>
-                                                </div>
-                                                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-                                                    <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
-                                                    <div class="select-menu-item-text">
-                                                        <input type="radio" name="protocol_selector" value="http" >
-                                                        <span class="select-menu-item-heading">
-                  Clone via
-                  HTTPS
-                </span>
-                                                        <span class="description">
-                    Clone with Git or checkout with SVN using the repository's web address.
-                  </span>
-                                                        <span class="js-select-button-text hidden-select-button-text">
-                  <div class="input-group-button">
-  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview" aria-expanded="false" aria-haspopup="true">
-    HTTPS
-  </button>
-</div>
-<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://gist.github.com/11203573.git" aria-label="Clone this repository at https://gist.github.com/11203573.git" readonly>
-<div class="input-group-button">
-  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
-</div>
-
-                </span>
-                                                    </div>
-                                                </div>
-                                                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-                                                    <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
-                                                    <div class="select-menu-item-text">
-                                                        <input type="radio" name="protocol_selector" value="ssh" >
-                                                        <span class="select-menu-item-heading">
-                  Clone via
-                  SSH
-                </span>
-                                                        <span class="description">
-                    Clone with an SSH key and passphrase from your GitHub settings.
-                  </span>
-                                                        <span class="js-select-button-text hidden-select-button-text">
-                  <div class="input-group-button">
-  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone SSH, location:repo overview" aria-expanded="false" aria-haspopup="true">
-    SSH
-  </button>
-</div>
-<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="git@gist.github.com:11203573.git" aria-label="Clone this repository at git@gist.github.com:11203573.git" readonly>
-<div class="input-group-button">
-  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
-</div>
-
-                </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="select-menu-list" role="menu">
-                                                <a class="select-menu-item select-menu-action" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank">
-                                                    <svg aria-hidden="true" class="octicon octicon-question select-menu-item-icon" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"/></svg>
-                                                    <div class="select-menu-item-text">
-                                                        Learn more about clone URLs
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+    <div class="top-banner" id="topbanner"></div>
+    <div class="column clearfix" id="focus-top" style="margin-top: 12px; margin-bottom: 31px;">
+        <div class="l-left-col" alog-group="focus-top-left">
+            <div id="left-col-wrapper">
+                <div class="recommend-tip-wrapper">
+                    <div class="tip-wrapper">
+                        <div class="background-wrapper">
+                            <a id="tip-float" class="mod-headline-tip" href="javascript:;">
+                                <div class="content-wrapper">
+                                    <i class="tip-logo"></i>
+                                    <div class="tip-content">点击刷新，将会有未读推荐</div>
                                 </div>
-                            </div>
-
-
-                            <div class="file-navigation-option">
-                                <a href="https://desktop.github.com" class="btn btn-sm tooltipped tooltipped-s tooltipped-multiline" aria-label="Save allex/11203573 to your computer and use it in GitHub Desktop.">
-                                    <svg aria-hidden="true" class="octicon octicon-desktop-download" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 6h3V0h2v6h3l-4 4-4-4zm11-4h-4v1h4v8H1V3h4V2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1z"/></svg>
-                                </a>
-                            </div>
-
-
-                            <div class="file-navigation-option">
-                                <a href="/allex/11203573/archive/80dfd4dcbbff17aa7a9746e7b87f5c007516a33e.zip"
-                                   class="btn btn-sm"
-                                   rel="nofollow"
-                                   data-ga-click="Gist, download zip, location:gist overview">
-                                    Download ZIP
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="float-left">
-                            <nav class="reponav js-repo-nav js-sidenav-container-pjax"
-                                 role="navigation"
-                                 data-pjax="#gist-pjax-container">
-
-                                <a href="/allex/11203573" aria-label="Code" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-pjax="true" data-selected-links="gist_code /allex/11203573">
-                                    <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
-                                    Code
-                                </a>
-                                <a href="/allex/11203573/revisions" aria-label="Revisions" class="js-selected-navigation-item reponav-item" data-hotkey="g r" data-pjax="true" data-selected-links="gist_revisions /allex/11203573/revisions">
-                                    <svg aria-hidden="true" class="octicon octicon-git-commit" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>
-                                    Revisions
-                                    <span class="Counter">3</span>
-                                </a>
-                                <a href="/allex/11203573/stargazers" aria-label="Stars" class="js-selected-navigation-item reponav-item" data-hotkey="g s" data-pjax="true" data-selected-links="gist_stars /allex/11203573/stargazers">
-                                    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
-                                    Stars
-                                    <span class="Counter">33</span>
-                                </a>
-                                <a href="/allex/11203573/forks" aria-label="Forks" class="js-selected-navigation-item reponav-item" data-hotkey="g f" data-pjax="true" data-selected-links="gist_forks /allex/11203573/forks">
-                                    <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-                                    Forks
-                                    <span class="Counter">13</span>
-                                </a></nav>
-
+                            </a>
                         </div>
                     </div>
-
-
+                </div>
+                <div id="headline-tabs" class="mod-headline-tab">
+                    <ul class="clearfix">
+                        <li class="active"><a href="javascript:;" data-control="pane-news">热点要闻</a></li>
+                        <li class="last-tab "><a href="javascript:;" data-control="pane-recommend">个性推荐</a></li>
+                    </ul>
+                    <a id="tab-login" class="tab-login" href="javascript:;" onclick="return false" mon="m=53&a=3"></a>
+                </div>
+                <div class="mod-tab-content">
+                    <div id="pane-news" class="mod-tab-pane active">
+                        <div class="hotnews" alog-group="focustop-hotnews">
+                            <ul><li class="hdline0">
+                                <i class="dot"></i>
+                                <strong>
+                                    <a href="http://www.chinanews.com/gn/2017/09-07/8325414.shtml" target="_blank" class="a3" mon="ct=1&a=1&c=top&pn=0">习近平应约同德国总理默克尔通电话</a>
+                                </strong>
+                            </li>
+                                <li class="hdline1">
+                                    <i class="dot"></i>
+                                    <strong>
+                                        <a href="http://app.cntv.cn/special/cportal/detail/arti/index.html?id=Arti9NMcKGFARFgnoQZafoTC170907&isNoImg=0&isNight=0&fromapp=cctvnews&from=singlemessage" target="_blank"  mon="r=1">《巡视利剑》第一集</a>
+                                        &nbsp;<a href="http://gd.people.com.cn/n2/2017/0908/c123932-30708289.html" target="_blank"  mon="r=1">打赢脱贫攻坚战的行动指南</a>
+                                    </strong>
+                                </li>
+                                <li class="hdline2">
+                                    <i class="dot"></i>
+                                    <strong>
+                                        <a href="http://tv.cctv.com/2017/09/07/VIDE4npgaFZX0Cj46HqqNJ4j170907.shtml" target="_blank" class="a3" mon="ct=1&a=1&c=top&pn=1">李克强致贺信</a>
+                                        &nbsp;<a href="http://tv.cctv.com/2017/09/07/VIDE0Ih5WbgsmWjop7rX5bhd170907.shtml" target="_blank" class="a3" mon="ct=1&a=1&c=top&pn=1">会见客人</a>
+                                        &nbsp;<a href="http://tv.cctv.com/2017/09/07/VIDE5pLfdRkJOpSekHtxhNr0170907.shtml" target="_blank" class="a3" mon="ct=1&a=1&c=top&pn=1">签国务院令</a>
+                                        &nbsp;<a href="http://tv.cctv.com/2017/09/07/VIDE3UiwqCzsn0Yj7t6yjC0A170907.shtml" target="_blank" class="a3" mon="ct=1&a=1&c=top&pn=1">张德江</a>
+                                    </strong>
+                                </li>
+                                <li class="hdline3">
+                                    <i class="dot"></i>
+                                    <strong>
+                                        <a href="http://news.china.com/focus/xysjd/" target="_blank"  mon="r=1">欢欣鼓舞迎接十九大</a>
+                                        &nbsp;<a href="http://paper.ce.cn/jjrb/html/2017-09/05/content_343444.htm" target="_blank"  mon="r=1">干部群众以实际行动迎盛会</a>
+                                    </strong>
+                                </li>
+                                <li class="hdline4">
+                                    <i class="dot"></i>
+                                    <strong>
+                                        <a href="http://china.huanqiu.com/article/2017-09/11225427.html?from=bdwz" target="_blank" class="a3" mon="ct=1&a=1&c=top&pn=2">医保异地结算系统初步建成 9月底前实现跨省结算</a>
+                                    </strong>
+                                </li>
+                                <li class="hdline5">
+                                    <i class="dot"></i>
+                                    <strong>
+                                        <a href="http://news.china.com/focus/taiwan/11165943/20170908/31316577.html" target="_blank"  mon="r=1">台媒：台语文课本世界文学严重不足 应学习大陆</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="ulist focuslistnews">
+                            <li class="bold-item">
+                                <span class="dot"></span>
+                                <a href="http://world.huanqiu.com/exclusive/2017-09/11227223.html" mon="ct=1&amp;a=2&amp;c=top&pn=1" target="_blank">墨西哥海岸发生8级地震 政府已发出海啸警报</a></li>
+                            <li>
+                                <a href="http://china.huanqiu.com/article/2017-09/11225421.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=2" target="_blank">中国发射一枚超级卫星：飞机高铁上将实现高速上网</a></li>
+                            <li>
+                                <a href="http://news.china.com/international/1000/20170908/31317641.html" mon="ct=1&amp;a=2&amp;c=top&pn=3" target="_blank">80万人将被遣返？ 特朗普：6个月内不会采取行动</a></li>
+                            <li>
+                                <a href="http://china.huanqiu.com/article/2017-09/11225368.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=4" target="_blank">北上广深等12城暂停共享单车投放 多地严查乱停乱放</a></li>
+                            <li>
+                                <a href="http://news.china.com/international/1000/20170908/31316510.html" mon="ct=1&amp;a=2&amp;c=top&pn=5" target="_blank">中国成非洲FDI最大来源国 对非洲影响至关重要</a></li>
+                            <li>
+                                <a href="http://china.huanqiu.com/article/2017-09/11225404.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=6" target="_blank">野生东北虎现身高速旁 官方发提醒:虎出没请注意</a></li>
+                        </ul>
+                        <ul class="ulist focuslistnews" >
+                            <li class="bold-item">
+                                <span class="dot"></span>
+                                <a href="https://baijia.baidu.com/topic?topic_id=682" mon="ct=1&amp;a=2&amp;c=top&pn=7" target="_blank">董明珠的格力手机算失败吗？</a></li>
+                            <li>
+                                <a href="http://news.china.com/domestic/945/20170908/31316462.html" mon="ct=1&amp;a=2&amp;c=top&pn=8" target="_blank">中国“海归”求职遇尴尬 起薪最低仅3500元</a></li>
+                            <li>
+                                <a href="http://china.huanqiu.com/article/2017-09/11225419.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=9" target="_blank">一举拿下辽宁4虎的他，曾当了14年煤矿工人</a></li>
+                            <li>
+                                <a href="http://news.china.com/domestic/945/20170908/31317579.html" mon="ct=1&amp;a=2&amp;c=top&pn=10" target="_blank">各地实施“两票制”后药费直降 一个月可少掏数千元</a></li>
+                            <li>
+                                <a href="http://xinwen.eastday.com/a/xjump.html?id=n170908070818505" mon="ct=1&amp;a=2&amp;c=top&pn=11" target="_blank">为什么只有不到10%的中国产妇享受到无痛分娩？</a></li>
+                            <li>
+                                <a href="http://news.china.com/international/1000/20170908/31316527.html" mon="ct=1&amp;a=2&amp;c=top&pn=12" target="_blank">中国赴韩旅游团“绝迹” 免税店欲靠奢侈品挽颓势</a></li>
+                        </ul>
+                        <ul class="ulist focuslistnews" >
+                            <li class="bold-item">
+                                <span class="dot"></span>
+                                <a href="http://news.china.com/socialgd/10000169/20170908/31322112.html" mon="ct=1&amp;a=2&amp;c=top&pn=13" target="_blank">李嘉诚20亿港元卖掉香港两幅地 每平米超百万</a></li>
+                            <li>
+                                <a href="http://news.china.com/socialgd/10000169/20170908/31318356.html" mon="ct=1&amp;a=2&amp;c=top&pn=14" target="_blank">官方公布产妇坠楼调查结果：诊疗措施合理</a></li>
+                            <li>
+                                <a href="http://china.huanqiu.com/article/2017-09/11225542.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=15" target="_blank">媒体：港中大撕海报事件 能让我们思考的其实更多</a></li>
+                            <li>
+                                <a href="http://news.china.com/domestic/945/20170908/31316504.html" mon="ct=1&amp;a=2&amp;c=top&pn=16" target="_blank">波音预计中国未来20年将花万亿美元买7240架新飞机</a></li>
+                            <li>
+                                <a href="http://world.huanqiu.com/exclusive/2017-09/11225211.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=17" target="_blank">起底朝鲜“核智囊”团队 “导弹三人组”享受殊荣</a></li>
+                            <li>
+                                <a href="http://news.china.com/internationalgd/10000166/20170908/31322170.html" mon="ct=1&amp;a=2&amp;c=top&pn=18" target="_blank">美国发生史上最严重信息泄露 一半美国人或受影响</a></li>
+                        </ul>
+                        <ul class="ulist focuslistnews" >
+                            <li class="bold-item">
+                                <span class="dot"></span>
+                                <a href="http://world.huanqiu.com/article/2017-09/11225425.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=19" target="_blank">俄副外长回应萨德入韩：不排除军事回应可能性</a></li>
+                            <li>
+                                <a href="http://news.china.com/socialgd/10000169/20170908/31317563.html" mon="ct=1&amp;a=2&amp;c=top&pn=20" target="_blank">四名男子施“苦肉计”欲陷害仇家 却把自己送进监狱</a></li>
+                            <li>
+                                <a href="http://world.huanqiu.com/exclusive/2017-09/11225201.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=21" target="_blank">韩媒：朴槿惠狱中过着两点一线生活 半年无人探视</a></li>
+                            <li>
+                                <a href="http://xinwen.eastday.com/a/xjump.html?id=n170908071702680" mon="ct=1&amp;a=2&amp;c=top&pn=22" target="_blank">男子抚养3个孩子 吓跑16个相亲对象</a></li>
+                            <li>
+                                <a href="http://society.huanqiu.com/article/2017-09/11225418.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=23" target="_blank">女生怀孕后检出白血病被退婚 爷爷：孙女命太苦</a></li>
+                            <li>
+                                <a href="http://news.china.com/socialgd/10000169/20170908/31317231.html" mon="ct=1&amp;a=2&amp;c=top&pn=24" target="_blank">男子“一夜暴富”成公司股东 名下多出60万元却愁坏</a></li>
+                        </ul>
+                        <ul class="ulist focuslistnews" >
+                            <li class="bold-item">
+                                <span class="dot"></span>
+                                <a href="http://news.china.com/socialgd/10000169/20170908/31317293.html" mon="ct=1&amp;a=2&amp;c=top&pn=25" target="_blank">上海1名男子超市劫持人质 持刀挥砍人质被击毙</a></li>
+                            <li>
+                                <a href="http://society.huanqiu.com/article/2017-09/11225464.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=26" target="_blank">高校新生身高2.1米 校方为其改造“超级大床”</a></li>
+                            <li>
+                                <a href="http://xinwen.eastday.com/a/xjump.html?id=n170908001420137" mon="ct=1&amp;a=2&amp;c=top&pn=27" target="_blank">女主持远嫁美国受虐?当事人:愿牺牲隐私让男人反思</a></li>
+                            <li>
+                                <a href="http://xinwen.eastday.com/a/xjump.html?id=n170908075859337" mon="ct=1&amp;a=2&amp;c=top&pn=28" target="_blank">农村小伙野外发现巨型“圆球” 了解实情后吓得腿发软</a></li>
+                            <li>
+                                <a href="http://society.huanqiu.com/article/2017-09/11225564.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=29" target="_blank">两车相撞万元现金散落一地 十余名村民全部捡回送还</a></li>
+                            <li>
+                                <a href="http://society.huanqiu.com/article/2017-09/11225461.html?from=bdwz" mon="ct=1&amp;a=2&amp;c=top&pn=30" target="_blank">男子开高档轿车偷超市廉价剃须刀:只是想占小便宜</a></li>
+                        </ul>
+                    </div>
+                    <div id="pane-recommend" class="mod-tab-pane pane-recommend ">
+                        <div class="mod-tab-loading">
+                            <i class="icon-loading"></i>
+                            <p class="desc">加载中请您耐心等待...</p>
+                        </div>
+                        <div class="tip-wrapper">
+                            <a id="tip" class="mod-headline-tip" href="javascript:;" mon="m=53&a=5">
+                                <i class="tip-logo"></i>
+                                <div class="tip-content">点击刷新，将会有未读推荐</div>
+                            </a>
+                        </div>
+                        <script type="text/javascript">
+                          // 如果有图的文章出现白图的情况（图片大小小于10*10则视为白图），去掉图片展示
+                          function checkimg(obj){
+                            // console.log('obj.width: ' + obj.width);
+                            if(obj.naturalWidth < 10){
+                              var picWrapper = obj.parentElement.parentElement;
+                              var item = obj.parentElement.parentElement.parentElement;
+                              // console.log('-------picWrapper');
+                              // console.dir(picWrapper);
+                              // console.log('-------item');
+                              // console.dir(item);
+                              picWrapper.style.display = 'none';
+                              if (item.className.search('notb') > -1){
+                                item.className = 'feeds-item-detail notb';
+                              } else {
+                                item.className = 'feeds-item-detail';
+                              }
+                            }
+                          }
+                        </script>
+                        <div class="feeds" id="feeds"></div>
+                        <div class="feeds-more" id="feeds-more">
+                            <a href="javascript:;" onclick="return false" mon="m=53&a=4"><span>更多个性推荐新闻</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="container new-discussion-timeline experiment-repo-nav">
-                <div class="repository-content gist-content">
-
-                    <div>
-                        <div class="repository-meta js-details-container Details">
-                            <div class="repository-meta-content" itemprop="about">
-                                Ubuntu 安装中文字体
+        </div>
+        <div class="l-right-col" alog-group="focus-top-right">
+            <div class="toparea-aside-top" alog-group="focustop-carousel">
+                <div class="imgplayer clearfix" id="imgplayer">
+                    <div id="imgplayer-control" class="carousel-control">
+                        <a href="javascript:void(0);" mon="c=top&a=50&col=4&ct=1&pn=0" id="imgplayer-prev" class="carousel-btn-prev">
+                            <span class="icon-wrap"></span>
+                        </a>
+                        <a href="javascript:void(0);" mon="c=top&a=52&col=4&ct=1&pn=0" id="imgplayer-next" class="carousel-btn-next">
+                            <span class="icon-wrap"></span>
+                        </a>
+                    </div>
+                    <div class="imgview" id="imgView">
+                        <a href="" target="_blank"></a>
+                    </div>
+                    <div class="imgnav-mask"></div>
+                    <div class="imgnav" id="imgNav">
+                        <a class="navbtn" index="8" mon="c=top&a=51&col=4&ct=1&pn=8" href="javascript:void(0)">8</a>
+                        <a class="navbtn" index="7" mon="c=top&a=51&col=4&ct=1&pn=7" href="javascript:void(0)">7</a>
+                        <a class="navbtn" index="6" mon="c=top&a=51&col=4&ct=1&pn=6" href="javascript:void(0)">6</a>
+                        <a class="navbtn" index="5" mon="c=top&a=51&col=4&ct=1&pn=5" href="javascript:void(0)">5</a>
+                        <a class="navbtn" index="4" mon="c=top&a=51&col=4&ct=1&pn=4" href="javascript:void(0)">4</a>
+                        <a class="navbtn" index="3" mon="c=top&a=51&col=4&ct=1&pn=3" href="javascript:void(0)">3</a>
+                        <a class="navbtn" index="2" mon="c=top&a=51&col=4&ct=1&pn=2" href="javascript:void(0)">2</a>
+                        <a class="navbtn" index="1" mon="c=top&a=51&col=4&ct=1&pn=1" href="javascript:void(0)">1</a>
+                    </div>
+                    <div class="imgtit" id="imgTitle">
+                        <a href="" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div alog-group="focus-top-news-hotwords">
+                <div class="mod h-bd-box" id="news-hotwords">
+                    <div class="hd line"><h3><a href="/n?cmd=1&class=reci" target="_blank">热搜新闻词</a><span class="en">HOT WORDS</span></h3></div>
+                    <div class="bd">
+                        <ul class="hotwords clearfix">
+                            <li class="li_0 li_color_0 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%8E%A6%E9%97%A8%E4%B8%89%E6%97%A5" target="_blank" class="hotwords_li_a" title="习近平厦门三日" mon="ct=1&amp;c=top&amp;a=30&pn=1">习近平厦门三日</a>
+                            </li>
+                            <li class="li_1 li_color_1 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%BA%94%E7%BA%A6%E5%90%8C%E5%BE%B7%E5%9B%BD%E6%80%BB%E7%90%86%E9%BB%98%E5%85%8B%E5%B0%94%E9%80%9A%E7%94%B5%E8%AF%9D" target="_blank" class="hotwords_li_a" title="习近平应约同德国总理默克尔通电话" mon="ct=1&amp;c=top&amp;a=30&pn=2">习近平应约同德国总理默克尔通电话</a>
+                            </li>
+                            <li class="li_2 li_color_2 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%8F%91%E5%B0%84%E4%B8%80%E6%9E%9A%E8%B6%85%E7%BA%A7%E5%8D%AB%E6%98%9F%EF%BC%9A%E9%A3%9E%E6%9C%BA%E9%AB%98%E9%93%81%E4%B8%8A%E5%B0%86%E5%AE%9E%E7%8E%B0%E9%AB%98%E9%80%9F%E4%B8%8A%E7%BD%91" target="_blank" class="hotwords_li_a" title="中国发射超级卫星" mon="ct=1&amp;c=top&amp;a=30&pn=3">中国发射<br/>超级卫星</a>
+                            </li>
+                            <li class="li_3 li_color_3 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E5%A2%A8%E8%A5%BF%E5%93%A5%E6%B5%B7%E5%B2%B8%E5%8F%91%E7%94%9F8%E7%BA%A7%E5%9C%B0%E9%9C%87%20%E6%94%BF%E5%BA%9C%E5%B7%B2%E5%8F%91%E5%87%BA%E6%B5%B7%E5%95%B8%E8%AD%A6%E6%8A%A5" target="_blank" class="hotwords_li_a" title="墨西哥海岸发生8级地震" mon="ct=1&amp;c=top&amp;a=30&pn=4">墨西哥海岸<br/>发生8级地震</a>
+                            </li>
+                            <li class="li_4 li_color_4 button-slide">
+                                <a href="https://www.baidu.com/s?wd=4%E8%BE%86%E2%80%9C%E8%90%A8%E5%BE%B7%E2%80%9D%E5%8F%91%E5%B0%84%E8%BD%A6%E8%BF%9B%E5%85%A5%E9%83%A8%E7%BD%B2%E5%9C%B0%20%E6%95%B4%E5%A5%97%E5%8F%8D%E5%AF%BC%E7%B3%BB%E7%BB%9F%E6%88%90%E5%BD%A2" target="_blank" class="hotwords_li_a" title="4辆萨德发射车进入部署地" mon="ct=1&amp;c=top&amp;a=30&pn=5">4辆萨德发射车<br/>进入部署地</a>
+                            </li>
+                            <li class="li_5 li_color_5 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC%E5%8C%BB%E6%94%B95%E4%B8%AA%E6%9C%88%E8%8D%AF%E4%BB%B7%E5%B9%B3%E5%9D%87%E9%99%8D%E5%B9%85%E8%B6%858%25%20%E4%BB%8A%E5%B9%B4%E5%8F%AF%E7%9C%8130%E4%BA%BF%E8%8D%AF%E8%B4%B9" target="_blank" class="hotwords_li_a" title="医改5个月药价降幅超8%" mon="ct=1&amp;c=top&amp;a=30&pn=6">医改5个月<br/>药价降幅超8%</a>
+                            </li>
+                            <li class="li_6 li_color_6 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E6%B9%96%E5%8D%97%E5%9B%9E%E5%BA%94%E5%9C%B0%E6%96%B9%E6%95%99%E6%9D%90%E5%AD%98%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9A%E5%90%91%E5%85%A8%E7%9C%81%E4%B8%AD%E5%B0%8F%E5%AD%A6%E7%94%9F%E9%81%93%E6%AD%89" target="_blank" class="hotwords_li_a" title="湖南回应地方教材存致命错误" mon="ct=1&amp;c=top&amp;a=30&pn=7">湖南回应地方<br/>教材存致命错误</a>
+                            </li>
+                            <li class="li_7 li_color_7 button-slide">
+                                <a href="https://www.baidu.com/s?wd=17%E5%B2%81CEO%E9%99%B7%E2%80%9C%E6%8A%84%E8%A2%AD%E9%A3%8E%E6%B3%A2%E2%80%9D%20%E4%BA%A7%E5%93%81%E8%A2%AB%E6%8C%87%E6%8A%84%E8%A2%AD%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BD%9C%E5%93%81" target="_blank" class="hotwords_li_a" title="17岁CEO陷抄袭风波" mon="ct=1&amp;c=top&amp;a=30&pn=8">17岁CEO陷<br/>抄袭风波</a>
+                            </li>
+                            <li class="li_8 li_color_8 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E7%BA%B3%E8%BE%BE%E5%B0%94%E9%87%8D%E8%BF%94%E7%BE%8E%E7%BD%91%E5%9B%9B%E5%BC%BA" target="_blank" class="hotwords_li_a" title="纳达尔重返美网四强" mon="ct=1&amp;c=top&amp;a=30&pn=9">纳达尔重返<br/>美网四强</a>
+                            </li>
+                            <li class="li_9 li_color_9 button-slide">
+                                <a href="https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%B7%B2%E5%8F%9110%E4%BA%BF%E5%BC%A0%E7%A4%BE%E4%BF%9D%E5%8D%A1%20%E6%9C%AA%E6%9D%A5%E5%B0%86%E6%9C%80%E7%BB%88%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%89%8B%E4%B8%80%E5%BC%A0" target="_blank" class="hotwords_li_a" title="中国已发10亿张社保卡" mon="ct=1&amp;c=top&amp;a=30&pn=10">中国已发10亿张社保卡</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-baijia column clearfix" id="baijia" alog-group="log-baijia">
+                <div class="column-title-home">
+                    <div class="column-title-border">
+                        <h2>
+                            <a href="https://baijia.baidu.com" target="_blank">百家号</a>
+                            <span class="en">BAIJIA</span>
+                        </h2>
+                        <div class="sub-class">
+                            <a href="https://baijia.baidu.com/channel?cat=3" target="_blank">财经</a>
+                            <a href="https://baijia.baidu.com/channel?cat=5" target="_blank">文化</a>
+                            <a href="https://baijia.baidu.com/channel?cat=2" target="_blank">娱乐</a>
+                            <a href="https://baijia.baidu.com/channel?cat=4" target="_blank" style="background: none">体育</a>
+                        </div>
+                        <span class="more"><a href="https://baijia.baidu.com" target="_blank">加入百家号</a></span>
+                    </div>
+                </div>
+                <div class="l-middle-col" style="height:305px;" alog-group="log-baijia-left-up">
+                    <div class="imagearea">
+                        <div class="imagearea-top" style="height:164px;">
+                            <div class="image-mask-item">
+                                <a href="https://baijia.baidu.com/s?id=1577846263886895344&wfr=pc&fr=idx_lst" target="_blank" class="item-image" mon="&a=12" title="ICO被判了死刑，比特币首富到底是如何炼成的？" style="background-image:url(https://imgsa.baidu.com/news/q%3D100/sign=14e9f8e61ece36d3a40487300af33a24/e4dde71190ef76c6e8b3ff179616fdfaaf5167ac.jpg)"></a>
+                                <a href="https://baijia.baidu.com/s?id=1577846263886895344&wfr=pc&fr=idx_lst" target="_blank" class="item-title" title="ICO被判了死刑，比特币首富到底是如何炼成的？" mon="&a=9">ICO被判了死刑，比特币首富到底是如何炼成的？</a>
                             </div>
                         </div>
-
-
-                        <div class="js-gist-file-update-container js-task-list-container file-box">
-                            <div id="file-gistfile1-md" class="file">
-                                <div class="file-header">
-                                    <div class="file-actions">
-
-                                        <a href="/allex/11203573/raw/80dfd4dcbbff17aa7a9746e7b87f5c007516a33e/gistfile1.md" class="btn btn-sm ">Raw</a>
-                                    </div>
-                                    <div class="file-info">
-          <span class="icon">
-            <svg aria-hidden="true" class="octicon octicon-gist" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.5 5L10 7.5 7.5 10l-.75-.75L8.5 7.5 6.75 5.75 7.5 5zm-3 0L2 7.5 4.5 10l.75-.75L3.5 7.5l1.75-1.75L4.5 5zM0 13V2c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1zm1 0h10V2H1v11z"/></svg>
-          </span>
-                                        <a class="tooltipped tooltipped-s css-truncate" aria-label="Permalink" href="#file-gistfile1-md">
-                                            <strong class="user-select-contain gist-blob-name css-truncate-target">
-                                                gistfile1.md
-                                            </strong>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div id="readme" class="readme blob instapaper_body">
-                                    <article class="markdown-body entry-content" itemprop="text"><h3><a id="user-content-环境-environment" class="anchor" href="#环境-environment" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>环境 (Environment)</h3>
-                                        <p>版本：Ubuntu 14.04 LTS
-                                            默认语言：English(United States)</p>
-                                        <h3><a id="user-content-安装-setup" class="anchor" href="#安装-setup" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装 (Setup)</h3>
-                                        <p>Debian 和 Ubuntu 下对中文支持比较好的字体有： fonts-droid、ttf-wqy-zenhei 和 ttf-wqy-microhei 等，除了文泉驿系列字体外，比较流行的免费中文字体还有文鼎提供的楷体和上海宋，包名分别是： fonts-arphic-ukai 和 fonts-arphic-uming。</p>
-                                        <p>sudo apt-get install fonts-droid ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming</p>
-                                        <p>注： 系统字体可以手动安装， /usr/share/fonts/</p>
-                                        <p>在/etc/fonts/conf.d 里面加上3 个文件的链接：
-                                            cd /etc/fonts/conf.d/
-                                            sudo ln -s /etc/fonts/conf.avail/69-language-selector-zh-cn.conf</p>
-                                        <div class="highlight highlight-text-xml"><pre>&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span>?&gt;
-&lt;!<span class="pl-k">DOCTYPE</span> <span class="pl-c1">fontconfig</span> SYSTEM "fonts.dtd"&gt;
-&lt;<span class="pl-ent">fontconfig</span>&gt;
-
-    &lt;<span class="pl-ent">match</span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>pattern<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">test</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>lang<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;zh-cn&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">test</span>&gt;
-        &lt;<span class="pl-ent">test</span> <span class="pl-e">qual</span>=<span class="pl-s"><span class="pl-pds">"</span>any<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>family<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;serif&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">test</span>&gt;
-        &lt;<span class="pl-ent">edit</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>family<span class="pl-pds">"</span></span> <span class="pl-e">mode</span>=<span class="pl-s"><span class="pl-pds">"</span>prepend<span class="pl-pds">"</span></span> <span class="pl-e">binding</span>=<span class="pl-s"><span class="pl-pds">"</span>strong<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;WenQuanYi Micro Hei&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UMing CN&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UMing HK&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL New Sung&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;WenQuanYi Bitmap Song&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UKai CN&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL ZenKai Uni&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;HYSong&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">edit</span>&gt;
-    &lt;/<span class="pl-ent">match</span>&gt;
-    &lt;<span class="pl-ent">match</span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>pattern<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">test</span> <span class="pl-e">qual</span>=<span class="pl-s"><span class="pl-pds">"</span>any<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>family<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;sans-serif&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">test</span>&gt;
-        &lt;<span class="pl-ent">test</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>lang<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;zh-cn&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">test</span>&gt;
-        &lt;<span class="pl-ent">edit</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>family<span class="pl-pds">"</span></span> <span class="pl-e">mode</span>=<span class="pl-s"><span class="pl-pds">"</span>prepend<span class="pl-pds">"</span></span> <span class="pl-e">binding</span>=<span class="pl-s"><span class="pl-pds">"</span>strong<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;WenQuanYi Micro Hei&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;Droid Sans Fallback&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;HYSong&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UMing CN&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UMing HK&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL New Sung&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UKai CN&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL ZenKai Uni&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">edit</span>&gt;
-    &lt;/<span class="pl-ent">match</span>&gt;
-    &lt;<span class="pl-ent">match</span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>pattern<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">test</span> <span class="pl-e">qual</span>=<span class="pl-s"><span class="pl-pds">"</span>any<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>family<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;monospace&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">test</span>&gt;
-        &lt;<span class="pl-ent">test</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>lang<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;zh-cn&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">test</span>&gt;
-        &lt;<span class="pl-ent">edit</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>family<span class="pl-pds">"</span></span> <span class="pl-e">mode</span>=<span class="pl-s"><span class="pl-pds">"</span>prepend<span class="pl-pds">"</span></span> <span class="pl-e">binding</span>=<span class="pl-s"><span class="pl-pds">"</span>strong<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;WenQuanYi Micro Hei Mono&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;Droid Sans Fallback&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;HYSong&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UMing CN&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UMing HK&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL New Sung&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL UKai CN&lt;/<span class="pl-ent">string</span>&gt;
-            &lt;<span class="pl-ent">string</span>&gt;AR PL ZenKai Uni&lt;/<span class="pl-ent">string</span>&gt;
-        &lt;/<span class="pl-ent">edit</span>&gt;
-    &lt;/<span class="pl-ent">match</span>&gt;
-
-&lt;/<span class="pl-ent">fontconfig</span>&gt;</pre></div>
-                                        <p>最后更新字体缓存，　注销重新登陆</p>
-                                        <p>sudo fc-cache -f -v</p>
-                                        <h3><a id="user-content-optional-设置系统字体" class="anchor" href="#optional-设置系统字体" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(Optional) 设置系统字体</h3>
-                                        <p>gconf-editor</p>
-                                        <ul>
-                                            <li>应用程序字体：/desktop/gnome/interface/font_name</li>
-                                            <li>文档字体：/desktop/gnome/interface/document_font_name</li>
-                                            <li>桌面字体：/apps/nautilus/preferences/desktop_font</li>
-                                            <li>窗口标题字体：/apps/metacity/general/titlebar_font</li>
-                                            <li>等宽字体：/desktop/gnome/interface/monospace_font_name</li>
-                                        </ul>
-                                        <h3><a id="user-content-references" class="anchor" href="#references" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References:</h3>
-                                        <ul>
-                                            <li><a href="http://edyfox.codecarver.org/html/debian_testing_chinese.html">http://edyfox.codecarver.org/html/debian_testing_chinese.html</a></li>
-                                            <li><a href="http://www.cnblogs.com/daizhe11/p/3384391.html">http://www.cnblogs.com/daizhe11/p/3384391.html</a></li>
-                                            <li><a href="http://www.makeuseof.com/tag/how-to-get-mac-and-windows-fonts-in-ubuntu-linux/">http://www.makeuseof.com/tag/how-to-get-mac-and-windows-fonts-in-ubuntu-linux/</a></li>
-                                        </ul>
-                                    </article>
-                                </div>
-
+                        <div class="imagearea-bottom">
+                            <div class="image-list-item">
+                                <a href="https://baijia.baidu.com/s?id=1577841799877011574&wfr=pc&fr=idx_lst" title="联通“混改”完成后为何先从“瘦身”开始？" target="_blank" mon="&a=12" class="img" style="background-image:url(https://imgsa.baidu.com/news/q%3D100/sign=fb698015e0c4b7453294b316fffc1e78/63d0f703918fa0ecf9c662312d9759ee3d6ddb8d.jpg)"></a><a href="https://baijia.baidu.com/s?id=1577841799877011574&wfr=pc&fr=idx_lst" mon="&a=9"  class="txt" target="_blank">联通“混改”完成后为何先从“瘦身”开始？</a>
                             </div>
-
+                            <div class="image-list-item">
+                                <a href="https://baijia.baidu.com/s?id=1577215562577465031&wfr=pc&fr=idx_lst" title="知乎，你还不赶紧谢谢今日头条" target="_blank" mon="&a=12" class="img" style="background-image:url(https://imgsa.baidu.com/news/q%3D100/sign=f6ca285554df8db1ba2e78643921dddb/9345d688d43f87940e6861e3d81b0ef41ad53a63.jpg)"></a><a href="https://baijia.baidu.com/s?id=1577215562577465031&wfr=pc&fr=idx_lst" mon="&a=9"  class="txt" target="_blank">知乎，你还不赶紧谢谢今日头条</a>
+                            </div>
                         </div>
-
-
-                        <a name="comments"></a>
-                        <div class="discussion-timeline gist-discussion-timeline js-quote-selection-container ">
-                            <div class="js-discussion js-socket-channel" data-channel="marked-as-read:gist:11203573">
-
-
-
-
-                                <!-- Rendered timeline since 2017-07-17 21:47:24 -->
-                                <div id="partial-timeline-marker"
-                                     class="js-timeline-marker js-updatable-content"
-                                     data-url="/allex/11203573/show_partial?partial=gist%2Ftimeline_marker&amp;since=1500353244"
-                                     data-last-modified="Tue, 18 Jul 2017 04:47:24 GMT"
-                                >
-                                </div>
-
-
-                                <div class="discussion-timeline-actions">
-                                    <div class="timeline-comment-wrapper timeline-new-comment js-comment-container">
-                                        <a href="/renaesop"><img alt="@renaesop" class="timeline-comment-avatar" height="44" src="https://avatars3.githubusercontent.com/u/5894477?v=4&amp;s=88" width="44" /></a>
-
-                                        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/allex/11203573/comments" class="js-new-comment-form" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="E+uauMyKZrLLaeyks4GfIB4IC7bywRTcxMKHOiPzbNFDfjn2ZghgX/ICU/+67sXNR5Rxcl6nhnD56FLhNVl+3A==" /></div>
-                                        <div class="timeline-comment">
-                                            <div class="js-suggester-container  js-previewable-comment-form previewable-comment-form write-selected" data-preview-url="/preview?markdown_unsupported=false&amp;subject=11203573&amp;subject_type=Gist" data-preview-authenticity-token="/mptIwhrO7TIHDl3fgD3lY2Ur5Cwxj/tkREXn6p2j0HfCr0xulQOiL8v7GbHcDC/Jhwnr+TxFOG/48/9PMoL3Q==">
-                                                <div class="comment-form-head tabnav">
-                                                    <div class="js-toolbar toolbar-commenting">
-                                                        <div class="toolbar-group">
-                                                            <div class="toolbar-item dropdown js-menu-container">
-                                                                <button type="button" tabindex="-1" class="js-menu-target menu-target tooltipped tooltipped-n" aria-label="Add header text" aria-expanded="false" aria-haspopup="true">
-                                                                    <svg aria-hidden="true" class="octicon octicon-text-size" height="16" version="1.1" viewBox="0 0 18 16" width="18"><path fill-rule="evenodd" d="M13.62 9.08L12.1 3.66h-.06l-1.5 5.42h3.08zM5.7 10.13S4.68 6.52 4.53 6.02h-.08l-1.13 4.11H5.7zM17.31 14h-2.25l-.95-3.25h-4.07L9.09 14H6.84l-.69-2.33H2.87L2.17 14H0l3.3-9.59h2.5l2.17 6.34L10.86 2h2.52l3.94 12h-.01z"/></svg>
-                                                                    <span class="dropdown-caret"></span>
-                                                                </button>
-
-                                                                <div class="dropdown-menu-content js-menu-content">
-                                                                    <ul class="dropdown-menu dropdown-menu-s">
-                                                                        <button type="button" class="js-toolbar-item dropdown-item dropdown-header1" data-prefix="# " data-ga-click="Markdown Toolbar, click, header1">
-                                                                            Header
-                                                                        </button>
-                                                                        <button type="button" class="js-toolbar-item dropdown-item dropdown-header2" data-prefix="## " data-ga-click="Markdown Toolbar, click, header2">
-                                                                            Header
-                                                                        </button>
-                                                                        <button type="button" class="js-toolbar-item dropdown-item dropdown-header3" data-prefix="### " data-ga-click="Markdown Toolbar, click, header3">
-                                                                            Header
-                                                                        </button>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Add bold text <cmd+b>" data-prefix="**" data-suffix="**" data-toolbar-hotkey="b" data-ga-click="Markdown Toolbar, click, bold" data-trim-first>
-                                                                <svg aria-hidden="true" class="octicon octicon-bold" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M1 2h3.83c2.48 0 4.3.75 4.3 2.95 0 1.14-.63 2.23-1.67 2.61v.06c1.33.3 2.3 1.23 2.3 2.86 0 2.39-1.97 3.52-4.61 3.52H1V2zm3.66 4.95c1.67 0 2.38-.66 2.38-1.69 0-1.17-.78-1.61-2.34-1.61H3.13v3.3h1.53zm.27 5.39c1.77 0 2.75-.64 2.75-1.98 0-1.27-.95-1.81-2.75-1.81h-1.8v3.8h1.8v-.01z"/></svg>
-                                                            </button>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Add italic text <cmd+i>" data-prefix="_" data-suffix="_" data-toolbar-hotkey="i" data-ga-click="Markdown Toolbar, click, italic" data-trim-first>
-                                                                <svg aria-hidden="true" class="octicon octicon-italic" height="16" version="1.1" viewBox="0 0 6 16" width="6"><path fill-rule="evenodd" d="M2.81 5h1.98L3 14H1l1.81-9zm.36-2.7c0-.7.58-1.3 1.33-1.3.56 0 1.13.38 1.13 1.03 0 .75-.59 1.3-1.33 1.3-.58 0-1.13-.38-1.13-1.03z"/></svg>
-                                                            </button>
-                                                        </div>
-
-                                                        <div class="toolbar-group">
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Insert a quote" data-prefix="> " data-multiline="true" data-ga-click="Markdown Toolbar, click, quote" data-surround-with-newlines>
-                                                                <svg aria-hidden="true" class="octicon octicon-quote" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6.16 3.5C3.73 5.06 2.55 6.67 2.55 9.36c.16-.05.3-.05.44-.05 1.27 0 2.5.86 2.5 2.41 0 1.61-1.03 2.61-2.5 2.61-1.9 0-2.99-1.52-2.99-4.25 0-3.8 1.75-6.53 5.02-8.42L6.16 3.5zm7 0c-2.43 1.56-3.61 3.17-3.61 5.86.16-.05.3-.05.44-.05 1.27 0 2.5.86 2.5 2.41 0 1.61-1.03 2.61-2.5 2.61-1.89 0-2.98-1.52-2.98-4.25 0-3.8 1.75-6.53 5.02-8.42l1.14 1.84h-.01z"/></svg>
-                                                            </button>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Insert code" data-prefix="`" data-suffix="`" data-block-prefix="```" data-block-suffix="```" data-ga-click="Markdown Toolbar, click, code">
-                                                                <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
-                                                            </button>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Add a link <cmd+k>" data-prefix="[" data-suffix="](url)" data-replace-next="url" data-toolbar-hotkey="k" data-scan-for="https?://" data-ga-click="Markdown Toolbar, click, link">
-                                                                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-                                                            </button>
-                                                        </div>
-
-                                                        <div class="toolbar-group">
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Add a bulleted list" data-multiline="true" data-prefix="- " data-multiline="true" data-ga-click="Markdown Toolbar, click, unordered list" data-surround-with-newlines>
-                                                                <svg aria-hidden="true" class="octicon octicon-list-unordered" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M2 13c0 .59 0 1-.59 1H.59C0 14 0 13.59 0 13c0-.59 0-1 .59-1h.81c.59 0 .59.41.59 1H2zm2.59-9h6.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1H4.59C4 2 4 2.41 4 3c0 .59 0 1 .59 1zM1.41 7H.59C0 7 0 7.41 0 8c0 .59 0 1 .59 1h.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1h.01zm0-5H.59C0 2 0 2.41 0 3c0 .59 0 1 .59 1h.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1h.01zm10 5H4.59C4 7 4 7.41 4 8c0 .59 0 1 .59 1h6.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1h.01zm0 5H4.59C4 12 4 12.41 4 13c0 .59 0 1 .59 1h6.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1h.01z"/></svg>
-                                                            </button>
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Add a numbered list" data-prefix="1. " data-multiline="true" data-ga-click="Markdown Toolbar, click, ordered list" data-ordered-list>
-                                                                <svg aria-hidden="true" class="octicon octicon-list-ordered" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 13c0 .59 0 1-.59 1H4.59C4 14 4 13.59 4 13c0-.59 0-1 .59-1h6.81c.59 0 .59.41.59 1H12zM4.59 4h6.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1H4.59C4 2 4 2.41 4 3c0 .59 0 1 .59 1zm6.81 3H4.59C4 7 4 7.41 4 8c0 .59 0 1 .59 1h6.81c.59 0 .59-.41.59-1 0-.59 0-1-.59-1zM2 1h-.72c-.3.19-.58.25-1.03.34V2H1v2.14H.16V5H3v-.86H2V1zm.25 8.13c-.17 0-.45.03-.66.06.53-.56 1.14-1.25 1.14-1.89C2.71 6.52 2.17 6 1.37 6c-.59 0-.97.2-1.38.64l.58.58c.19-.19.38-.38.64-.38.28 0 .48.16.48.52 0 .53-.77 1.2-1.7 2.06V10h3l-.09-.88h-.66l.01.01zm-.08 3.78v-.03c.44-.19.64-.47.64-.86 0-.7-.56-1.11-1.44-1.11-.48 0-.89.19-1.28.52l.55.64c.25-.2.44-.31.69-.31.27 0 .42.13.42.36 0 .27-.2.44-.86.44v.75c.83 0 .98.17.98.47 0 .25-.23.38-.58.38-.28 0-.56-.14-.81-.38l-.48.66c.3.36.77.56 1.41.56.83 0 1.53-.41 1.53-1.16 0-.5-.31-.81-.77-.94v.01z"/></svg>
-                                                            </button>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-n" aria-label="Add a task list" data-prefix="- [ ] " data-toolbar-hotkey="L" data-multiline data-ga-click="Markdown Toolbar, click, task list" data-surround-with-newlines>
-                                                                <svg aria-hidden="true" class="octicon octicon-tasklist" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M15.41 9H7.59C7 9 7 8.59 7 8c0-.59 0-1 .59-1h7.81c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM9.59 4C9 4 9 3.59 9 3c0-.59 0-1 .59-1h5.81c.59 0 .59.41.59 1 0 .59 0 1-.59 1H9.59zM0 3.91l1.41-1.3L3 4.2 7.09 0 8.5 1.41 3 6.91l-3-3zM7.59 12h7.81c.59 0 .59.41.59 1 0 .59 0 1-.59 1H7.59C7 14 7 13.59 7 13c0-.59 0-1 .59-1z"/></svg>
-                                                            </button>
-                                                        </div>
-
-                                                        <div class="toolbar-group">
-
-                                                            <div class="toolbar-item select-menu select-menu-modal-right js-menu-container js-select-menu js-load-contents js-saved-reply-container"
-                                                                 data-contents-url="/settings/replies?context=none">
-
-                                                                <button type="button" tabindex="-1" class="js-menu-target menu-target tooltipped tooltipped-nw"
-                                                                        aria-label="Insert a reply" aria-expanded="false" aria-haspopup="true" data-ga-click="Markdown Toolbar, click, saved reply">
-                                                                    <svg aria-hidden="true" class="octicon octicon-reply" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6 3.5c3.92.44 8 3.125 8 10-2.312-5.062-4.75-6-8-6V11L.5 5.5 6 0v3.5z"/></svg>
-                                                                    <span class="dropdown-caret"></span>
-                                                                </button>
-
-                                                                <div class="select-menu-modal-holder js-menu-content js-navigation-container">
-                                                                    <div class="select-menu-modal">
-                                                                        <div class="select-menu-header">
-                                                                            <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-                                                                            <span class="select-menu-title">Select a reply</span>
-                                                                        </div>
-                                                                        <div class="js-select-menu-deferred-content"></div>
-                                                                        <div class="select-menu-loading-overlay anim-pulse">
-                                                                            <svg aria-hidden="true" class="octicon octicon-octoface" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-nw" aria-label="Directly mention a user or team" data-prefix="@" data-prefix-space data-ga-click="Markdown Toolbar, click, mention">
-                                                                <svg aria-hidden="true" class="octicon octicon-mention" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6.58 15c1.25 0 2.52-.31 3.56-.94l-.42-.94c-.84.52-1.89.83-3.03.83-3.23 0-5.64-2.08-5.64-5.72 0-4.37 3.23-7.18 6.58-7.18 3.45 0 5.22 2.19 5.22 5.2 0 2.39-1.34 3.86-2.5 3.86-1.05 0-1.36-.73-1.05-2.19l.73-3.75H8.98l-.11.72c-.41-.63-.94-.83-1.56-.83-2.19 0-3.66 2.39-3.66 4.38 0 1.67.94 2.61 2.3 2.61.84 0 1.67-.53 2.3-1.25.11.94.94 1.45 1.98 1.45 1.67 0 3.77-1.67 3.77-5C14 2.61 11.59 0 7.83 0 3.66 0 0 3.33 0 8.33 0 12.71 2.92 15 6.58 15zm-.31-5c-.73 0-1.36-.52-1.36-1.67 0-1.45.94-3.22 2.41-3.22.52 0 .84.2 1.25.83l-.52 3.02c-.63.73-1.25 1.05-1.78 1.05V10z"/></svg>
-                                                            </button>
-
-                                                            <button type="button" tabindex="-1" class="js-toolbar-item toolbar-item tooltipped tooltipped-nw" aria-label="Reference an issue or pull request" data-prefix="#" data-prefix-space data-ga-click="Markdown Toolbar, click, reference">
-                                                                <svg aria-hidden="true" class="octicon octicon-bookmark" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M9 0H1C.27 0 0 .27 0 1v15l5-3.09L10 16V1c0-.73-.27-1-1-1zm-.78 4.25L6.36 5.61l.72 2.16c.06.22-.02.28-.2.17L5 6.6 3.12 7.94c-.19.11-.25.05-.2-.17l.72-2.16-1.86-1.36c-.17-.16-.14-.23.09-.23l2.3-.03.7-2.16h.25l.7 2.16 2.3.03c.23 0 .27.08.09.23h.01z"/></svg>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-
-                                                    <nav class="tabnav-tabs" role="tablist">
-                                                        <button type="button" class="btn-link tabnav-tab write-tab js-write-tab selected " role="tab" aria-selected="true">Write</button>
-                                                        <button type="button" class="btn-link tabnav-tab preview-tab js-preview-tab " role="tab">Preview</button>
-                                                    </nav>
-                                                </div>
-
-
-                                                <div class="comment-form-error js-comment-form-error" style="display:none">    There was an error creating your Gist.
-                                                </div>
-                                                <div class="write-content js-write-bucket js-uploadable-container js-upload-markdown-image is-default upload-enabled"
-                                                     data-upload-policy-url="/upload/policies/assets" data-upload-policy-authenticity-token="/dTStW+otQ1VKbUvBfsgy/fNbFxGeSfw0e19bPkdbdDItj/tm7Ep8zTNywV4AzAbFiT5OLEi/ZAJSCW0g4rzmA=="
-                                                >
-
-                                                    <input type="hidden" name="saved_reply_id" class="js-saved-reply-id js-resettable-field" value="" data-reset-value="">
-
-                                                    <textarea name="comment[body]"
-                                                              id="new_comment_field"
-
-                                                              placeholder="Leave a comment"
-                                                              aria-label="Comment body"
-                                                              class="form-control input-contrast comment-form-textarea js-comment-field js-improved-comment-field js-task-list-field js-quick-submit js-size-to-fit js-suggester-field js-quote-selection-target js-session-resumable"
-                                                    ></textarea>
-
-                                                    <p class="drag-and-drop position-relative">
-    <span class="default">
-        Attach files by dragging &amp; dropping,
-        <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser" aria-label="Attach files to your comment">
-        <span class="btn-link manual-file-chooser-text">selecting them</span>, or pasting
-        from the clipboard.
-    </span>
-                                                        <span class="loading">
-      <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" /> Uploading your files…
-    </span>
-                                                        <span class="error bad-file">
-      We don’t support that file type.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again</button> with a
-        PNG, GIF, JPG, DOCX, PPTX, XLSX, TXT, PDF, or ZIP.
-      </span>
-    </span>
-                                                        <span class="error bad-permissions">
-      Attaching documents requires write permission to this repository.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again</button> with a PNG, GIF, or JPG.
-      </span>
-    </span>
-                                                        <span class="error repository-required">
-      We don’t support that file type.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again</button> with a PNG, GIF, or JPG.
-      </span>
-    </span>
-                                                        <span class="error too-big">
-      Yowza, that’s a big file.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again</button> with a file smaller than 10MB.
-      </span>
-    </span>
-                                                        <span class="error empty">
-      This file is empty.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again</button> with a file that’s not empty.
-      </span>
-    </span>
-                                                        <span class="error hidden-file">
-      This file is hidden.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again</button> with another file.
-      </span>
-    </span>
-                                                        <span class="error failed-request">
-      Something went really wrong, and we can’t process that file.
-      <input type="file" multiple="multiple" class="manual-file-chooser top-0 right-0 bottom-0 left-0 width-full ml-0 js-manual-file-chooser">
-      <span class="drag-and-drop-error-info">
-        <button type="button" class="btn-link manual-file-chooser-text">Try again.</button>
-      </span>
-    </span>
-                                                    </p>
-
-
-                                                    <div class="suggester-container">
-                                                        <div class="suggester js-suggester js-navigation-container"
-                                                             data-url="/allex/11203573/suggestions"
-                                                        >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="preview-content">
-                                                    <div class="comment">
-                                                        <div class="comment-body markdown-body js-preview-body">
-                                                            <p>Nothing to preview</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="float-left">
-                                                    <a class="tabnav-extra" href="https://guides.github.com/features/mastering-markdown/" target="_blank" data-ga-click="Markdown Toolbar, click, help">
-                                                        <svg aria-hidden="true" class="octicon octicon-markdown v-align-bottom" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z"/></svg>
-                                                        Styling with Markdown is supported
-                                                    </a>
-                                                </div>
-
-
-                                                <div class="comment-form-error comment-form-bottom js-comment-update-error"></div>
-                                            </div>
-
-
-                                            <div class="form-actions">
-                                                <div id="partial-new-comment-form-actions">
-                                                    <button type="submit" class="btn btn-primary" data-disable-with data-disable-invalid>
-                                                        Comment
-                                                    </button>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </form></div>
-
+                    </div>
+                </div>
+                <div class="l-right-col" style="width:290px;" alog-group="log-baijia-right-up">
+                    <div class="baijia-focus-list">
+                        <ul class="ulist bdlist">
+                            <li class="bold-item"><a href="https://baijia.baidu.com/s?id=1577935472358348697" target="_blank" mon="a=9">一张图让你读懂共享经济！</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577932218331144708" target="_blank" mon="a=9">从陈欧到王凯歆再到李昕泽，创业者为何一代不如一代？</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577926525542357706" target="_blank" mon="a=9">一元开宝马背后故事：36家公司火拼分时租赁！</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577926122159057769" target="_blank" mon="a=9">ATM扫码取款，从微信转钱支付宝还要等多久？</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577925327213751996" target="_blank" mon="a=9">「Quora精彩问答」机器学习的十条金科玉律</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                        </ul>
+                        <ul class="ulist bdlist" style="padding-top:5px">
+                            <li class="bold-item"><a href="https://baijia.baidu.com/s?id=1577922485010128630" target="_blank" mon="a=9">人民币汇率升破6.5 换汇人每10万美元亏4.62万人民币</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577920275245928552" target="_blank" mon="a=9">华为董事会改选：一场隐秘、曲折的信披</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577918844652825029" target="_blank" mon="a=9">投机者炒币提心吊胆，骗子和卖显卡的却赚翻了</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577904226091428882" target="_blank" mon="a=9">盘点5家妹子最多的互联网公司：70％都是女员工是怎样的体验</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                            <li><a href="https://baijia.baidu.com/s?id=1577898560155429819" target="_blank" mon="a=9">谷歌工程师：激发人的想象力才能创造惊艳的用户体验</a><a href="" target="_blank" mon="a=9" class="name"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-middle-col" alog-group="log-baijia-left-down">
+                    <div class="mod tbox" id="baijia-aside-recommend">
+                        <div class="hd line" style="height:30px;line-height:30px;">
+                            <h3>
+                                <span>百家聚焦</span>
+                                <span class="en">BAIJIA FOCUS</span>
+                            </h3>
+                        </div>
+                        <div class="bd" style="position:relative;height:160px;overflow:hidden;">
+                            <div class="imagearea">
+                                <div class="imagearea-top">
+                                    <div class="image-mask-item">
+                                        <a href="https://baijia.baidu.com/s?id=1577839317024601791&wfr=pc&fr=idx_lst" target="_blank" class="item-image" mon="&a=12" title="支付宝老大位置不保？第三方支付江湖变数依旧" style="background-image:url(https://imgsa.baidu.com/news/q%3D100/sign=980d4a552e2dd42a590905ab333b5b2f/37d12f2eb9389b5000e5ff6e8e35e5dde7116ef7.jpg)"></a>
+                                        <a href="https://baijia.baidu.com/s?id=1577839317024601791&wfr=pc&fr=idx_lst" target="_blank" class="item-title" title="支付宝老大位置不保？第三方支付江湖变数依旧" mon="&a=9">支付宝老大位置不保？第三方支付江湖变数依旧</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="modal-backdrop js-touch-events"></div>
-            </div><!-- /.container -->
-
+                <div class="l-right-col" style="width:290px" alog-group="log-baijia-right-down">
+                    <div class="mod tbox">
+                        <div class="hd line" style="height:30px;line-height:30px;border-bottom:1px solid #ececec;">
+                            <h3>
+                                <span>热门文章</span>
+                                <span class="en">BAIJIA HOT</span>
+                            </h3>
+                        </div>
+                        <div class="bd" style="position:relative;height:170px;">
+                            <div class="wgt-tab" id="bd-tab">
+                                <div class="wgt-tab-tag">
+                                    <ul>
+                                        <li class="active"><a href="javascript:void(0)">日榜</a></li>
+                                        <li><a href="javascript:void(0)">周榜</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wgt-tab-ctns">
+                                    <div class="wgt-tab-ctn">
+                                        <ol class="olist bdlist">
+                                            <li><span class="listnum num1"></span><a href="https://baijia.baidu.com/s?id=1577846263886895344" target="_blank" title="ICO被判了死刑，比特币首富到底是如何炼成的？" mon="pn=1">ICO被判了死刑，比特币首富</a><a href="https://baijia.baidu.com/u?app_id=1536766446357582" target="_blank" mon="pn=1" class="name">磐石之心</a></li>
+                                            <li><span class="listnum num2"></span><a href="https://baijia.baidu.com/s?id=1577832941868939675" target="_blank" title="A股创出20个月新高，牛市就在我们眼前吗？" mon="pn=2">A股创出20个月新高，牛市就</a><a href="https://baijia.baidu.com/u?app_id=1536770929855953" target="_blank" mon="pn=2" class="name">郭施亮</a></li>
+                                            <li><span class="listnum num3"></span><a href="https://baijia.baidu.com/s?id=1577839317024601791" target="_blank" title="支付宝老大位置不保？第三方支付江湖变数依旧" mon="pn=3">支付宝老大位置不保？第三方支</a><a href="https://baijia.baidu.com/u?app_id=1536766737196056" target="_blank" mon="pn=3" class="name">刘旷</a></li>
+                                            <li><span class="listnum num4"></span><a href="https://baijia.baidu.com/s?id=1577841799877011574" target="_blank" title="联通“混改”完成后为何先从“瘦身”开始？" mon="pn=4">联通“混改”完成后为何先从“</a><a href="https://baijia.baidu.com/u?app_id=1536766549127199" target="_blank" mon="pn=4" class="name">小刀马</a></li>
+                                            <li><span class="listnum num5"></span><a href="https://baijia.baidu.com/s?id=1577920275245928552" target="_blank" title="华为董事会改选：一场隐秘、曲折的信披" mon="pn=5">华为董事会改选：一场隐秘、曲</a><a href="https://baijia.baidu.com/u?app_id=1536766468395259" target="_blank" mon="pn=5" class="name">王如晨</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="wgt-tab-ctn">
+                                        <ol class="olist bdlist">
+                                            <li><span class="listnum num1"></span><a href="https://baijia.baidu.com/s?id=1577568801563251247" target="_blank" title="弃《战狼2》投《三生三世》，善于豪赌的光线传媒正日趋平庸" mon="pn=1">弃《战狼2》投《三生三世》，</a><a href="https://baijia.baidu.com/u?app_id=1536766783015290" target="_blank" mon="pn=1" class="name">歪道道</a></li>
+                                            <li><span class="listnum num2"></span><a href="https://baijia.baidu.com/s?id=1577846263886895344" target="_blank" title="ICO被判了死刑，比特币首富到底是如何炼成的？" mon="pn=2">ICO被判了死刑，比特币首富</a><a href="https://baijia.baidu.com/u?app_id=1536766446357582" target="_blank" mon="pn=2" class="name">磐石之心</a></li>
+                                            <li><span class="listnum num3"></span><a href="https://baijia.baidu.com/s?id=1577662546140865006" target="_blank" title="独家重磅！李彦宏飞了一趟俄罗斯，要跟网络“地头蛇”谈大买卖？" mon="pn=3">独家重磅！李彦宏飞了一趟俄罗</a><a href="https://baijia.baidu.com/u?app_id=1536771174024962" target="_blank" mon="pn=3" class="name">犀利财经</a></li>
+                                            <li><span class="listnum num4"></span><a href="https://baijia.baidu.com/s?id=1577659536356496223" target="_blank" title="主打“AI”，麒麟970能给华为带来变革么？" mon="pn=4">主打“AI”，麒麟970能给</a><a href="https://baijia.baidu.com/u?app_id=1536766629667262" target="_blank" mon="pn=4" class="name">丁傲西</a></li>
+                                            <li><span class="listnum num5"></span><a href="https://baijia.baidu.com/s?id=1577753365292544864" target="_blank" title="麒麟970、骁龙835和三星8895谁更强？答案令人意外！" mon="pn=5">麒麟970、骁龙835和三星</a><a href="https://baijia.baidu.com/u?app_id=1536766821008995" target="_blank" mon="pn=5" class="name">雷科技</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="mod-localnews column clearfix" id="local_news">
+        <div class="column-title-home" alog-group="log-mil-title">
+            <div class="column-title-border">
+                <h2><span id="city_name"><a href="javascript:void(0)" target="_blank"><span>北京</span>新闻</a></span><span class="cname">LOCAL NEWS</span></h2>
+                <div class="localnews_logo" id="localnews_logo"></div>
+                <a id="change-city" class="select-btn">切换城市</a>
+                <span class="more" id="p-more-link"><a href="/n?cmd=6&loc=0&name=%B8%DB%B0%C4%CC%A8&locname=%B8%DB%B0%C4%CC%A8" id="more-link" target="_blank">更多</a></span>
+            </div>
+        </div>
+        <div class="l-left-col col-mod" alog-group="log-local-left">
+            <ul class="ulist focuslistnews" id="localnews-focus">
+            </ul>
+        </div>
+        <div class="l-middle-col" alog-group="log-local-middle">
+            <div class="mod">
+                <div class="hd">
+                    <h3>新闻图片</h3>
+                </div>
+                <div class="bd">
+                    <div class="imagearea" id="local_default" style="display:block">
+                        <div class="imagearea-top">
+                            <div class="image-mask-item">
+                                <a href="" target="_blank" class="item-image" mon="&amp;pn=1&a=12" title=""><img src="" alt=""/></a>
+                                <a href="" target="_blank" class="item-title" title="" mon="&amp;pn=1&a=9"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imagearea" id="local_current" style="display:none">
+                        <div class="imagearea-top" id="localnews-pic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-right-col" alog-group="log-local-right">
+            <div class="mod tbox" id="internet-aside-gsdt">
+                <div class="hd line"><h3>新闻资讯</h3></div>
+                <div class="bd" id="localnews-zixun">
+                    <ul class="ulist">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ad-banner" id="localNews_ad"></div>
+        <div id="city_view" class="city_view">
+            <div class="city_list"></div>
+            <div id="btn_back" class="btn_back">返回</div>
+            <div id="btn_close" class="btn_close"></div>
+            <p class="city-tip">您所选城市新闻不足，将展示省会新闻</p>
+            <div class="up_triangle"></div>
+        </div>
+        <div id="status" class="loading">正在加载，请稍候...</div>
+    </div>
+    <ul id="goTop" class="mod-sidebar">
+        <li class="item report button-rotate" data-text="举报">
+            <a href="http://report.12377.cn:13225/toreportinputNormal_anis.do">举报</a>
+        </li>
+        <li class="item qr-code button-rotate" data-text="二维码">
+            <a href="javascript:;">二维码</a>
+        </li>
+        <li class="qr-code-container clearfix">
+<span class="item-container left">
+<span class="img-container">
+<img src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/img/sidebar/1014720a_385933c.png"/>
+</span>
+</span>
+            <span class="item-container right">
+<p class="title">百度新闻客户端</p>
+<ul>
+<li>扫描二维码下载</li>
+<li>随时随地收看更多新闻</li>
+</ul>
+</span>
+        </li>
+        <li class="item favorite button-rotate" data-text="收藏本站">
+            <a href="javascript:;">收藏本站</a>
+        </li>
+        <li class="item media button-rotate" data-text="传媒">
+            <a href="http://media.baidu.com">传媒</a>
+        </li>
+        <li class="item search button-rotate" data-text="搜索">
+            <a href="javascript:;" id="search-btn">搜索</a>
+        </li>
+        <li class="item feedback button-rotate" id="feedbackbtn" data-text="用户反馈">
+            <a href="javascript:;">用户反馈</a>
+        </li>
+        <li class="item gotop">
+            <a id="gotop_btn" onclick="window.scroll(0, 0)"></a>
+        </li>
+        <li class="searchbox">
+            <span class="close-btn"></span>
+            <form target="_blank" action="http://news.baidu.com/ns" name="sbaidu" method="get">
+                <input type="hidden" name="tn" value="news"/>
+                <input type="hidden" name="from" value="news"/>
+                <input type="hidden" name="cl" value="2"/>
+                <input type="hidden" name="rn" value="20"/>
+                <input type="hidden" name="ct" value="1"/>
+                <input class="searchInput" type="text" value="输入搜索词" name="word" autocomplete="off" tabindex="1" maxlength="100"/>
+                <button class="submit-btn" type="submit">搜索</button>
+            </form>
+        </li>
+        <li class="close-tip">收起<i class="arrow"></i></li>
+    </ul>
+    <style>
+        #goTop{
+            position: fixed;
+            width: 54px;
+            left: 50%;
+            margin-left: 502px;
+            bottom: 20px;
+            _position: absolute;
+            _top: expression(eval(document.documentElement.scrollTop || document.body.scrollTop)+eval(document.documentElement.clientHeight || document.body.clientHeight)-361+'px');
+            z-index:998;
+        }
+    </style>
 
 </div>
 
-
-<div class="footer container-lg px-3" role="contentinfo">
-    <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
-        <ul class="list-style-none d-flex flex-wrap ">
-            <li class="mr-3">&copy; 2017 <span title="0.25233s from unicorn-2291568960-8b4ss">GitHub</span>, Inc.</li>
-            <li class="mr-3"><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
-            <li class="mr-3"><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
-            <li class="mr-3"><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
-            <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
-            <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
-        </ul>
-
-        <a href="https://github.com" aria-label="Homepage" class="footer-octicon" title="GitHub">
-            <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+<div id="footerwrapper">
+    <div class="bottombar" alog-group="log-footer-bottombar" alog-alias="hunter-start-bottombar">
+        <div class="bottombar-inner clearfix">
+            <div class="bot-left">
+                <div class="title-container">
+                    <i class="icon">&nbsp;</i>
+                    <h4>更多精彩内容</h4>
+                </div>
+                <div class="qrcode-container clearfix">
+                    <div class="img-container">
+                        <img src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/img/footer/1014720b_120b2c9.png">
+                    </div>
+                    <div class="link-container">
+                        <a href="http://downpack.baidu.com/baidunews_AndroidPhone_1014720b.apk" target="_blank">Android版下载</a>
+                        <a href="https://itunes.apple.com/cn/app/id482820737" target="_blank">iPhone版下载</a>
+                    </div>
+                    <p class="info">扫描二维码, 收看更多新闻</p>
+                </div>
+            </div>
+            <div class="bot-center">
+                <div class="title-container">
+                    <i class="icon">&nbsp;</i>
+                    <h4>相关功能</h4>
+                </div>
+                <ul class="item-container clearfix">
+                    <li class="item item-01"><a href="http://www.baidu.com/search/rss.html" target="_blank">新闻订阅</a></li>
+                    <li class="item item-02"><a href="http://news.baidu.com/n?bypass=lamp&m=pagesother&v=newsgx" target="_blank">个性化新闻</a></li>
+                    <li class="item item-03"><a href="http://newsalert.baidu.com/na?cmd=0" target="_blank">邮件新闻订阅</a></li>
+                    <li class="item item-04"><a href="http://news.baidu.com/n?cmd=6&loc=0&name=%B1%B1%BE%A9" target="_blank">地区新闻</a></li>
+                    <li class="item item-05"><a href="http://news.baidu.com/history.html" target="_blank">历史新闻</a></li>
+                    <li class="item item-06"><a href="http://news.baidu.com/newscode.html" target="_blank">新闻免费代码</a></li>
+                </ul>
+            </div>
+            <div class="bot-right">
+                <div class="title-container">
+                    <i class="icon">&nbsp;</i>
+                    <h4>百度新闻独家出品</h4>
+                </div>
+                <ol>
+                    <li>1. 新闻由机器选取每5分钟自动更新</li>
+                    <li>2. 百度新闻搜索源于互联网新闻网站和频道，系统自动分类排序</li>
+                    <li>3. 百度不刊登或转载任何完整的新闻内容</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div style="font-size:12px;text-align:center;">
+        责任编辑：胡彦BN098 刘石娟BN068 谢建BN085 李芳雨BN091 储信艳BN087 焦碧碧BN084 禤聪BN095 王鑫BN060 崔超BN071 违法和不良信息举报电话：010-59922128</div>
+    <div id="footer" alog-group="log-footer" alog-alias="hunter-start-footer">
+        <a href="http://tousu.baidu.com/news/add">投诉中心</a>
+        <span>京公网安备11000002000001号</span>
+        <a href="http://news.baidu.com/licence.html">互联网新闻信息服务许可</a>
+        <span>&copy;2017Baidu</span>
+        <a class="cy" href="http://www.baidu.com/duty/">使用百度前必读</a>
+        <a target="_blank" class="img-link img-link1" href="http://net.china.cn/chinese/index.htm">
         </a>
-        <ul class="list-style-none d-flex flex-wrap ">
-            <li class="mr-3"><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
-            <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
-            <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
-            <li class="mr-3"><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
-            <li class="mr-3"><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
-            <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
-
-        </ul>
+        <a target="_blank" class="img-link img-link2" href="http://www.bj.cyberpolice.cn/index.htm">
+        </a>
+        <a target="_blank" class="img-link img-link3" href="http://www.bjjubao.org/">
+        </a>
     </div>
 </div>
+<style>
+    .focustop-anchor{
+        height:0;
+        line-height:0;
+        font-size:0;
+    }
+    #headerwrapper{
+        width:100%;
+    }
+</style>
+</body><script type="text/javascript" src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/lib/mod_b818356.js"></script>
+<script type="text/javascript">require.resourceMap({"res":{"common:widget/lib/tangram/base/base.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/tangram/base/base_e37cc01.js","pkg":"common:p0"},"common:widget/lib/magic/magic.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/magic_56edf31.js","pkg":"common:p0"},"common:widget/lib/magic/Base/Base.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/Base/Base_50a505e.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js"]},"common:widget/lib/magic/control/control.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/control/control_5c7cfca.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js"]},"common:widget/lib/magic/control/Layer/Layer.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/control/Layer/Layer_ccd8d01.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/Base/Base.js","common:widget/lib/magic/control/control.js"]},"common:widget/lib/magic/Mask/Mask.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/Mask/Mask_d1105f9.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/control/Layer/Layer.js"]},"common:widget/lib/magic/setup/setup.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/setup/setup_8207eff.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js"]},"common:widget/lib/magic/_query/_query.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/_query/_query_a974d80.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js"]},"common:widget/lib/magic/control/Tab/Tab.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/control/Tab/Tab_6e3b376.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/Base/Base.js","common:widget/lib/magic/control/control.js","common:widget/lib/magic/_query/_query.js"]},"common:widget/lib/magic/setup/tab/tab.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/setup/tab/tab_7ca296e.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/setup/setup.js","common:widget/lib/magic/control/Tab/Tab.js"]},"common:widget/lib/magic/control/Dialog/Dialog.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/control/Dialog/Dialog_c2b9c1a.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/control/Layer/Layer.js"]},"common:widget/lib/magic/Background/Background.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/Background/Background_353ebd3.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/Base/Base.js"]},"common:widget/lib/magic/Dialog/Dialog.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/Dialog/Dialog_239df5f.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/control/Dialog/Dialog.js","common:widget/lib/magic/Background/Background.js"]},"common:widget/lib/magic/control/Dialog/$mask/$mask.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/lib/magic/control/Dialog/$mask/$mask_50466b3.js","pkg":"common:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/control/Dialog/Dialog.js","common:widget/lib/magic/Mask/Mask.js"]},"common:widget/ui/jquery/jquery.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/jquery/jquery_5d7279d.js","pkg":"common:p1"},"common:widget/ui/jquery/jquery.cookie.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/jquery/jquery.cookie_e1f1479.js","pkg":"common:p1"},"common:widget/banner_ad/banner_ad.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/banner_ad/banner_ad_5c31727.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js","common:widget/ui/jquery/jquery.cookie.js"]},"common:widget/banner_ad/banner_ad_data.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/banner_ad/banner_ad_data_aff68ed.js","pkg":"common:p1"},"common:widget/dep/jQuery/plugins/jquery.lavalamp.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/dep/jQuery/plugins/jquery.lavalamp_5a9954b.js","pkg":"common:p1"},"common:widget/favorite/favorite.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/favorite/favorite_629bb5e.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js","common:widget/ui/jquery/jquery.cookie.js"]},"common:widget/feedback/feedback.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/feedback/feedback_616d46e.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js","common:widget/ui/jquery/jquery.cookie.js"]},"common:widget/fixedpannel/fixedpannel.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/fixedpannel/fixedpannel_bf4dc4c.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js","common:widget/lib/magic/magic.js","common:widget/lib/magic/control/Layer/Layer.js","common:widget/lib/magic/Mask/Mask.js","common:widget/lib/magic/setup/tab/tab.js","common:widget/lib/magic/Dialog/Dialog.js"]},"common:widget/footer/statistics.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/footer/statistics_d0bd505.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/header/header.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/header/header_c2a1ecd.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/hunter/hunter.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/hunter/hunter_2113114.js","pkg":"common:p1"},"common:widget/navbar/navbar.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/navbar/navbar_3ad387b.js","pkg":"common:p1","deps":["common:widget/dep/jQuery/plugins/jquery.lavalamp.js","common:widget/ui/jquery/jquery.js"]},"common:widget/searchbox/searchbox.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/searchbox/searchbox_4c1f361.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/searchbox/searchboxActive.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/searchbox/searchboxActive_f139a7f.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/searchbox/searchradio.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/searchbox/searchradio_e67ae37.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/second_navbar/fold.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/second_navbar/fold_b1dea17.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/show_top_qrcode/show_top_qrcode.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/show_top_qrcode/show_top_qrcode_db04dfa.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/sidebar/sidebar.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/sidebar/sidebar_2e986db.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js","common:widget/feedback/feedback.js"]},"common:widget/ui/jquery/jquery-ui.min.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/jquery/jquery-ui.min_793696a.js","pkg":"common:p1"},"common:widget/ui/jquery/jquery.animateEvents.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/jquery/jquery.animateEvents_fa2738c.js","pkg":"common:p1"},"common:widget/ui/vs/vs.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/vs_ac8f6e6.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/ui/vs/observer/observer.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/observer/observer_7031f75.js","pkg":"common:p1"},"common:widget/ui/vs/ContentPlayer/ContentPlayer.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/ContentPlayer/ContentPlayer_cfa437e.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js","common:widget/ui/vs/vs.js","common:widget/ui/vs/observer/observer.js"]},"common:widget/ui/vs/DynamicList/DynamicList.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/DynamicList/DynamicList_757360e.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js","common:widget/ui/vs/vs.js","common:widget/ui/vs/observer/observer.js"]},"common:widget/ui/vs/ScrollView/ScrollView.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/ScrollView/ScrollView_e529192.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js","common:widget/ui/vs/vs.js"]},"common:widget/ui/vs/Slide/Slide.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/Slide/Slide_bcb1535.js","pkg":"common:p1","deps":["common:widget/ui/jquery/jquery.js"]},"common:widget/ui/vs/citylist/citylist.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/citylist/citylist_39082c3.js","pkg":"common:p1"},"common:widget/ui/vs/clickMonitor/clickMonitor.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/clickMonitor/clickMonitor_533da73.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/ui/vs/delayload/delayload.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/delayload/delayload_5eb105b.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/ui/vs/enterState/enterState.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/enterState/enterState_896b21b.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/ui/vs/imgLazyLoad/ImglazyLoad.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/imgLazyLoad/ImglazyLoad_f2b8599.js","pkg":"common:p1"},"common:widget/ui/vs/slider/slider.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/slider/slider_32bdf45.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/ui/vs/suggestion/suggestion.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/suggestion/suggestion_027b3c0.js","pkg":"common:p1","deps":["common:widget/lib/tangram/base/base.js"]},"common:widget/ui/vs/utils/utils.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/common/widget/ui/vs/utils/utils_73e2453.js","pkg":"common:p1"},"news:widget/HouseNews/HouseNews.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/HouseNews/HouseNews_4ceed49.js","pkg":"news:p0","deps":["common:widget/ui/vs/DynamicList/DynamicList.js","common:widget/ui/vs/vs.js","common:widget/lib/tangram/base/base.js","common:widget/ui/vs/citylist/citylist.js","common:widget/ui/jquery/jquery.js"]},"news:widget/LocalNews/LocalNews.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/LocalNews/LocalNews_3d01225.js","pkg":"news:p0","deps":["common:widget/ui/vs/DynamicList/DynamicList.js","common:widget/ui/vs/vs.js","common:widget/lib/tangram/base/base.js","common:widget/ui/vs/citylist/citylist.js","common:widget/ui/jquery/jquery.js"]},"news:widget/TopBanner/TopBanner.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/TopBanner/TopBanner_b620b2a.js","pkg":"news:p0","deps":["common:widget/ui/jquery/jquery.js"]},"news:widget/col_media/col_media.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/col_media/col_media_c2b0b0c.js","pkg":"news:p0"},"news:widget/events/events.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/events/events_cea6978.js","pkg":"news:p0"},"news:widget/hotrollnews/hotrollnews.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/hotrollnews/hotrollnews_debd370.js","pkg":"news:p0","deps":["common:widget/lib/tangram/base/base.js"]},"news:widget/hotwords/hotwords.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/hotwords/hotwords_85ad191.js","pkg":"news:p0","deps":["common:widget/ui/jquery/jquery.js"]},"news:widget/hx_stock/hx_stock.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/hx_stock/hx_stock_71853d1.js","pkg":"news:p0","deps":["common:widget/lib/tangram/base/base.js","common:widget/ui/vs/vs.js"]},"news:widget/mod_baijia/mod_baijia.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/mod_baijia/mod_baijia_471a804.js","pkg":"news:p0","deps":["common:widget/lib/tangram/base/base.js"]},"news:widget/mod_headline_tab/mod_headline_recommend.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/mod_headline_tab/mod_headline_recommend_15dbeeb.js","pkg":"news:p0","deps":["common:widget/ui/jquery/jquery.js"]},"news:widget/mod_headline_tab/mod_headline_tab.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/mod_headline_tab/mod_headline_tab_7304c05.js","pkg":"news:p0","deps":["common:widget/ui/jquery/jquery.js","common:widget/ui/jquery/jquery.cookie.js","news:widget/mod_headline_tab/mod_headline_recommend.js"]},"news:widget/mod_pagination/mod_pagination.js":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/news/widget/mod_pagination/mod_pagination_20b212d.js","pkg":"news:p0"}},"pkg":{"common:p0":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/framework_static_include/framework_static_include_ce87dbe.js"},"common:p1":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/module_static_include/module_static_include_1949f19.js"},"news:p0":{"url":"https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/news/focustop/focustop_afe4289.js"}}});</script><script type="text/javascript" src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/module_static_include/module_static_include_1949f19.js"></script>
+<script type="text/javascript" src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/common/framework_static_include/framework_static_include_ce87dbe.js"></script>
+<script type="text/javascript" src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/static/fisp_static/news/focustop/focustop_afe4289.js"></script>
+<script type="text/javascript">!function(){    	void function(a,b,c,d,e,f,g){a.alogObjectName=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=a[e].l||+new Date,d="https:"===a.location.protocol?"https://fex.bdstatic.com"+d:"http://fex.bdstatic.com"+d;var h=!0;if(a.alogObjectConfig&&a.alogObjectConfig.sample){var i=Math.random();a.alogObjectConfig.rand=i,i>a.alogObjectConfig.sample&&(h=!1)}h&&(f=b.createElement(c),f.async=!0,f.src=d+"?v="+~(new Date/864e5)+~(new Date/864e5),g=b.getElementsByTagName(c)[0],g.parentNode.insertBefore(f,g))}(window,document,"script","/hunter/alog/alog.min.js","alog"),void function(){function a(){}window.PDC={mark:function(a,b){alog("speed.set",a,b||+new Date),alog.fire&&alog.fire("mark")},init:function(a){alog("speed.set","options",a)},view_start:a,tti:a,page_ready:a}}();
+  void function(n){var o=!1;n.onerror=function(n,e,t,c){var i=!0;return!e&&/^script error/i.test(n)&&(o?i=!1:o=!0),i&&alog("exception.send","exception",{msg:n,js:e,ln:t,col:c}),!1},alog("exception.on","catch",function(n){alog("exception.send","exception",{msg:n.msg,js:n.path,ln:n.ln,method:n.method,flag:"catch"})})}(window);
+}();
+!function(){		alog('speed.set', 'ht', +new Date);
+}();
+!function(){		var widgetList = ['civilnews', 'InternationalNews', 'FinanceNews', 'EnterNews', 'SportNews', 'AutoNews', 'HouseNews', 'InternetNews', 'InternetPlusNews', 'TechNews', 'EduNews', 'GameNews', 'DiscoveryNews', 'HealthNews', 'LadyNews', 'SocialNews', 'MilitaryNews', 'PicWall'];
+  var remainWigetList = $.extend(true, [], widgetList);
+  var widgetStatus = (function () {
+    var list = {};
+    for (var i in widgetList) {
+      list[widgetList[i]] = false;
+    }
+    return list;
+  })();
+  var widgetReferenceList = [];
+  // 保证栏目按widgetList的顺序append到#body上
+  var appendWidget = function (widgetName, widgetDom) {
+    var previousWidgetRef = null;
+    widgetReferenceList[widgetName] = $(widgetDom);
+    for (var i = 0; i < widgetList.length; i++) {
+      previousWidgetName = widgetList[i]
+      if (previousWidgetName === widgetName) {
+        break;
+      }
+      if (widgetReferenceList[previousWidgetName]) {
+        previousWidgetRef = widgetReferenceList[previousWidgetName];
+      }
+    }
+    if (!previousWidgetRef) {
+      nextWidgetRef = null;
+      for (var i = widgetList.length - 1; i >= 0; i--) {
+        nextWidgetName = widgetList[i]
+        if (nextWidgetName === widgetName) {
+          break;
+        }
+        if (widgetReferenceList[nextWidgetName]) {
+          nextWidgetRef = widgetReferenceList[nextWidgetName];
+        }
+      }
+      if (!nextWidgetRef) {
+        $('#body').append(widgetReferenceList[widgetName]);
+      } else {
+        nextWidgetRef.before(widgetReferenceList[widgetName]);
+      }
+    } else {
+      previousWidgetRef.last().after(widgetReferenceList[widgetName]);
+    }
+  }
+
+  var renderWidget = function (widgetName) {
+    $.ajax({
+      url: '/widget',
+      type: 'GET',
+      dataType: 'html',
+      data: {
+        id: widgetName,
+          /*ajax: 'json',*/
+        // 时间戳，防止ie6缓存ajax请求导致第二次不请求数据
+        t: new Date().getTime()
+      },
+      timeout: 5000
+    }).done(function (data) {
+      appendWidget(widgetName, data);
+    });
+  }
+  var getLoadingWidgetName = function () {
+    return remainWigetList.shift();
+  }
+  var isChrome = navigator.userAgent.indexOf("Chrome") > -1;
+  var isSafari = navigator.userAgent.indexOf("Safari") > -1;
+  window.onscroll = function () {
+    var body = $('body');
+    var height = body.height();
+    var scrollTop = 0;
+    if (isChrome || isSafari) {
+      scrollTop = $('body').scrollTop();
+    } else {
+      scrollTop = document.documentElement.scrollTop;
+    }
+    if (scrollTop > 1) {
+      widgetName = getLoadingWidgetName();
+
+      if (widgetStatus[widgetName] === false) {
+        widgetStatus[widgetName] = true;
+        renderWidget(widgetName);
+      }
+    }
+  }
+}();
+!function(){		$(function () {
+  $.ajax({
+    url: '/passport',
+    type: 'GET',
+    dataType: 'json',
+    timeout: 5000
+  }).done(function (data) {
+    var userName = '';
+    var isLogin = false;
+    if(data.errno ===0 && data.data && data.data.displayname) {
+      isLogin = true;
+      userName = data.data.displayname;
+    }
+    window['isLogin'] = isLogin;
+    require.async("common:widget/ui/vs/enterState/enterState.js", function (enterState) {
+      enterState(userName, "")
+    });
+  });
+})
+}();
+!function(){	window.onbeforeunload = function(e){
+  window.scrollTo(0,0);
+}
+}();
+!function(){    require.async(['common:widget/header/header.js'],
+  function (mod) {
+    mod.init();
+  }
+);
+}();
+!function(){	require.async('common:widget/show_top_qrcode/show_top_qrcode.js', function(showqrcode) {
+  showqrcode.init();
+});
+}();
+!function(){    require.async(["common:widget/lib/tangram/base/base.js", "common:widget/searchbox/searchbox.js", "common:widget/ui/vs/suggestion/suggestion.js"], function(baidu,searchbox,suggestion){
+  baidu.dom.ready(function(){
+    searchbox();
+    if (navigator.cookieEnabled && !/sug?=0/.test(document.cookie)){
+      suggestion();
+    }
+
+  });
+});
+}();
+!function(){    require.async(['common:widget/searchbox/searchradio.js', 'common:widget/searchbox/searchboxActive.js'], function(searchRadio, searchboxActive) {
+  searchRadio();
+  searchboxActive();
+});
+}();
+!function(){require.async(['common:widget/navbar/navbar.js'],
+  function (mod) {
+    mod.init();
+  }
+);
+}();
+!function(){    require.async(['common:widget/ui/jquery/jquery.js', 'news:widget/TopBanner/TopBanner.js'], function($, module){
+  $(function(){
+    module.loadTopAD();
+  });
+});
+}();
+!function(){		var extraInfo = {
+  m: 11,
+  c: 'top'
+};
+  require.async('common:widget/ui/vs/clickMonitor/clickMonitor.js', function(clickMonitor){
+    clickMonitor.init('TOP');
+  });
+  require.async(['common:widget/lib/tangram/base/base.js', 'common:widget/ui/vs/delayload/delayload.js'],function(baidu,delayload){
+    baidu.dom.ready(function(){
+      //图片延迟加载
+      var delay=new delayload();
+
+      delay.init();
+      delay.delayLoader(1);
+      delay.bindUI();
+    });
+  });
+
+  var PAGE_DATA = {
+    "guess_list_num": 0,
+    "guess_jsonp_status" : true
+  };
+}();
+!function(){        require.async('news:widget/mod_headline_tab/mod_headline_tab.js', function (Tab) {
+  $(function () {
+    var tab = new Tab(0);
+    tab.init();
+  });
+});
+}();
+!function(){  require.async(["common:widget/lib/tangram/base/base.js", "common:widget/ui/vs/ContentPlayer/ContentPlayer.js"], function(T, I) {
+  var G = T.dom.g;
+  var on = T.event.on;
+  var imgList = [];
+  var cpOptions_1 = {
+    getBtns: function(){
+      var a, btns;
+      btns = G('imgNav').getElementsByTagName('a');
+      a = [];
+      for(var i=btns.length - 1; i>=0; i--){
+        a.push(btns[i]);
+      }
+      return a;
+    },
+    mainViewContainer: G('imgView'),
+    prevBtn: G('imgplayer-prev'),
+    nextBtn: G('imgplayer-next'),
+    changeAction: 'mouseover',
+    subViewContainer: G('imgTitle'),
+    style: {on: 'active', off: ''},
+    mainViewTpl: '<a href="#{url}" target="_blank" mon="c=top&a=12&col=4&pn=#{index}"><img src="#{imgUrl}"></a>',
+    subViewTpl: '<a href="#{url}" target="_blank" mon="col=4&a=9&ct=1&pn=#{index}"><strong>#{title}</strong>#{abs}</a>',
+    curIndex: 0,
+    data: [],
+    interval: 5000
+  };
+
+  cpOptions_1.data.push({
+    "index": 1,
+    //"title": "习近平出席金砖厦门会晤系列活动纪实",
+    "title": "习近平出席金砖厦门会晤系列活动纪实",
+    "url": "http:\/\/news.xinhuanet.com\/photo\/2017-09\/06\/c_1121618156.htm",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=869e0b68084f78f0860b9ef349310a83\/63d9f2d3572c11dfd49f2a1f682762d0f703c244.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/news.xinhuanet.com\/photo\/2017-09\/06\/c_1121618156.htm"});
+  cpOptions_1.data.push({
+    "index": 2,
+    //"title": "“北京服务”惊艳金砖会晤",
+    "title": "“北京服务”惊艳金砖会晤",
+    "url": "http:\/\/china.huanqiu.com\/photo\/2017-09\/2882832.html?from=bdtp#p=1",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=0d8d4d16bb51f819f725074aeab54a76\/21a4462309f79052acbd8c0307f3d7ca7bcbd569.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/china.huanqiu.com\/photo\/2017-09\/2882832.html?from=bdtp#p=1"});
+  cpOptions_1.data.push({
+    "index": 3,
+    //"title": "乔治小王子入学第一天:&quot;害怕&quot;与校长握手",
+    "title": "乔治小王子入学第一天:\x22害怕\x22与校长握手",
+    "url": "http:\/\/world.huanqiu.com\/photo\/2017-09\/2882786.html?from=bdtp#p=1",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=5320585d44c2d562f408d4edd71190f3\/960a304e251f95ca3bd0648bc2177f3e670952e2.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/world.huanqiu.com\/photo\/2017-09\/2882786.html?from=bdtp#p=1"});
+  cpOptions_1.data.push({
+    "index": 4,
+    //"title": "西安10岁女孩身高1.72米 她想成为排球运动员",
+    "title": "西安10岁女孩身高1.72米 她想成为排球运动员",
+    "url": "http:\/\/china.huanqiu.com\/photo\/2017-09\/2882795.html?from=bdtp#p=1",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=ac148be3366d55fbc3c672265d224f40\/b3119313b07eca80efbbdeda9a2397dda1448355.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/china.huanqiu.com\/photo\/2017-09\/2882795.html?from=bdtp#p=1"});
+  cpOptions_1.data.push({
+    "index": 5,
+    //"title": "天津全运会 孙杨六金一银收官",
+    "title": "天津全运会 孙杨六金一银收官",
+    "url": "http:\/\/pic.chinadaily.com.cn\/2017-09\/08\/content_31711475.htm",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=c43bae0b16950a7b73354ac43ad1625c\/6159252dd42a2834bca8c33650b5c9ea15cebf85.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/pic.chinadaily.com.cn\/2017-09\/08\/content_31711475.htm"});
+  cpOptions_1.data.push({
+    "index": 6,
+    //"title": "飓风肆虐后的海岛",
+    "title": "飓风肆虐后的海岛",
+    "url": "http:\/\/world.huanqiu.com\/photo\/2017-09\/2882787.html?from=bdtp#p=1",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=91c70e1c798b4710c82ff9ccf3cec3b2\/79f0f736afc3793121337014e0c4b74543a911b7.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/world.huanqiu.com\/photo\/2017-09\/2882787.html?from=bdtp#p=1"});
+  cpOptions_1.data.push({
+    "index": 7,
+    //"title": "飞行员高空中探出舱门自拍 照片是不是真的？",
+    "title": "飞行员高空中探出舱门自拍 照片是不是真的？",
+    "url": "http:\/\/photo.cankaoxiaoxi.com\/bd\/2017\/0908\/2228448.shtml",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=adeb8be025738bd4c221b631918b876c\/0df3d7ca7bcb0a4685407f046063f6246b60afa9.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/photo.cankaoxiaoxi.com\/bd\/2017\/0908\/2228448.shtml"});
+  cpOptions_1.data.push({
+    "index": 8,
+    //"title": "波音787-9客机载客前的终极测试",
+    "title": "波音787-9客机载客前的终极测试",
+    "url": "http:\/\/photo.cankaoxiaoxi.com\/bd\/2017\/0908\/2228416.shtml",
+    "imgUrl": "https:\/\/imgsa.baidu.com\/news\/q%3D100\/sign=3a4c4438eedde711e1d247f697efcef4\/94cad1c8a786c9179010a604c23d70cf3bc757f8.jpg",
+    "abs": "",
+    "meadia": ""
+  });
+  imgList.push({"url":"http:\/\/photo.cankaoxiaoxi.com\/bd\/2017\/0908\/2228416.shtml"});
+
+  var index = 0 ;
+  var url = location.href.substr(location.href.indexOf("?")+1).split("&");
+  var key ;
+  for(var i = 0 ; i < url.length ; i++){
+    var tmp = url[i].split("=");
+    if(tmp&&tmp.length>0&&tmp[0]=="lb"){
+      key = tmp[1];
+    }
+  }
+  for(var p in imgList){
+    if(imgList[p].url == key){
+      index = p ;
+    }
+  }
+  cpOptions_1.curIndex = index;
+  var cp_1 = new I.Model(cpOptions_1);
+
+  on(window, 'load', function(){
+    cp_1.play(index+1);
+  });
+
+  var controlers = baidu.dom.query('#imgNav a');
+  baidu.each(controlers, function(item,i){
+    baidu.on(item,'mouseover',function(e){
+      UserMonitor.send(e, 6, {c: "top", a:"51", col: "4", ct: "1", m: "11", pn: 8-i});
+      window.alog && alog("monkey.fire", "record", {
+        type: "click",
+        target: item
+      });
+    });
+  });
+});
+}();
+!function(){
+    /*var ___lis___ = $(".hotwords li"),___images___ = $('.hotwords img'),___words___=$('.hotwords_li_a');
+     $.each(___images___,function(i,item){
+     var $item = $(item),
+     src = $item.attr('m_m_src'),
+     _img = new Image();
+     _img.onload = function(){
+
+     $item.attr('src', src);
+     if(_img.width > _img.height){
+     if($item.parents('li').width() > 68){
+     $item.css('width', '139px');
+     }else{
+     $item.css('height', '68px');
+
+     }
+     }else{
+     $item.css('width',$item.parents('li').width());
+     }
+     _img.onload = null;
+     }
+     _img.src = src;
+     });
+     $.each(___lis___,function(i,item){
+     $(item).mouseenter(function(e){
+     $('.detail',this).animate({top:'0px'},200,function(){});
+
+     });
+     $(item).mouseleave(function(e){
+     $('.detail',this).animate({top:'68px'},200,function(){});
+     });
+     });
+     $.each(___words___, function(i, item) {
+     $(item).find('img').length == 0 && $(item).css({"padding-top": (68 - item.offsetHeight)/2 + "px"}) || $(item).css({"padding": 0, 'width':$(item).width()+9+'px'});
+     $(item).css({
+     "visibility": "visible"
+     });
+     });*/
 
 
 
-<div id="ajax-error-message" class="ajax-error-message flash flash-error">
-    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
-    <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
-        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-    </button>
-    You can't perform that action at this time.
-</div>
+  require.async('news:widget/hotwords/hotwords.js', function (mod) {
+    mod.init();
+  });
 
+}();
+!function(){    require.async('news:widget/mod_baijia/mod_baijia.js', function(tab){
+  var tab =  new tab({
+    container : 'nba-tab',
+    event : 'mouseover'
+  }).setup();
+});
+}();
+!function(){	    void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s<n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
+}();
+!function(){    require.async('news:widget/LocalNews/LocalNews.js', function(initLocalHotNews){
 
+  //地方新闻和各地房产新闻共享LocalNewsConfig配置
+  window.LocalNewsConfig = {
+    cookieName: 'LOCALGX',
+    cookieDomain: 'news.baidu.com',
+    defaultFailedLocalCity: '北京',
+    defaultLocalCityID:0,
+    defaultHouseCity: '北京',
+    defaultFailedHouseCity: '各地',
+    htmlTpl: {
+      more_link: '<a target="_blank" href="/n?cmd=6&loc=#{locID}&name=#{city_name}&locname=#{city_name}&locid=#{locID}" id="more-link" style="visibility: visible;">更多</a> ',
+      more_link_sh: '<a target="_blank" href="/sh" id="more-link" style="visibility: visible;">更多</a> ',
+      city_list: '<a href="javascript:void(0);" mon="col=10&locname=#{city_name}&locid=#{locID}" prop="#{prop}">#{title}</a> ',
+      city_name_link: '<a href="/n?cmd=6&loc=#{locID}&name=#{city_name}&locname=#{city_name}&locid=#{locID}" target="_blank" class="#{class_name}"><b>#{city_name}</b>新闻</a>',
+      city_name_link_sh: '<a href="/sh" target="_blank" class="#{class_name}"><b>#{city_name}</b>新闻</a>',
+      city_name_no_link: '<b>#{city_name}</b>新闻',
+      local_news: '<li><span class="num num-#{index}">#{index_pad}</span><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></li>',
+      //local_news_sh: '<li><span class="num num-#{index}">#{index_pad}</span><a href="/sh" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></li>',
+      house_news: '<li><span class="num num-#{index}">#{index_pad}</span><a href="#{url}" mon="c=housenews&ct=0&a=27&col=9" target="_blank">#{title}</a></li>',
+      local_news_top : '<li class="top-localnews"><h4><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></h4><p><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank"><img src="#{imgUrl}"></a>#{abs}</p></li>',
+      local_news_top_noimg : '<li class="top-localnews" style="height:80px"><h4><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></h4><p>#{abs}</p></li>',
+      focus : '<li><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></li>',
+      focus_bold : '<li class="bold-item"><span class="dot"></span><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></li>',
+      pic : '<div class="image-mask-item"><a href="#{url}" target="_blank" class="item-image" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}"><img src="#{imgUrl}"/></a><a href="#{url}" target="_blank" class="item-title" mon="">#{title}</a></div>',
+      other : '<li><a href="#{url}" mon="c=civilnews&ct=0&a=27&col=8&locname=#{city_name}&locid=#{locID}" target="_blank">#{title}</a></li>'
+    },
+    timeout: 5000
+  }
+  initLocalHotNews({
+    pageType: 'TOP',
+    request: {
+      url: '/n?m=rddata&v=index_data&rn1=17',
+      callback : 'bdNewsJsonCallBack'
+    },
+    //data: city.localCities,
+    triggerLevel: 2,
+    statusID: 'status',
+    cityNameID: 'city_name',
+    logoID: 'localnews_logo',
+    pmoreLinkID: 'p-more-link',
+    moreLinkID: 'more-link',
+    cityViewID: 'city_view',
+    changeCityID: 'change-city',
+    closeBtnID: 'btn_close',
+    backBtnID: 'btn_back',
+    localNewsID:{
+      focus : 'localnews-focus',
+      pic : 'localnews-pic',
+      other :'localnews-zixun',
+      ad:'localNews_ad'
+    },
+    maxItemsShown: 10,
+    timeout: LocalNewsConfig.timeout
+  });
+});
+}();
+!function(){require.async(['common:widget/sidebar/sidebar.js'],
+  function (Sidebar) {
+    $(function () {
+      var sidebar = new Sidebar();
+      sidebar.init();
+    });
+  }
+);
+}();
+!function(){    require.async(['common:widget/footer/statistics.js'], function (mod) {
+  // 页面加载后，向biglog发送一个pv统计，传入hostname区分产品和频道
+  mod.postReferToBiglog();
+  // 页面加载后，初始化发送往百度统计的打点
+  mod.initClickPostToTongji();
+  // 页面加载后，向百度统计发送页面的refer
+  mod.postReferToTongji();
+});
+}();
+!function(){    document.write("<img src='/nocache/mp/b.jpg?cmd=3&"+Math.random()+"' style='display:none;'>");
+  document.write("<img id='cgif' src='http://c.baidu.com/c.gif?t=5&p=1&"+Math.random()+"' style='display:none'>");
+}();
+!function(){	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe9e114d958ea263de46e080563e254c4' type='text/javascript'%3E%3C/script%3E"));
+}();
+!function(){	require.async('common:widget/lib/tangram/base/base.js',function(baidu){
+  baidu.each(baidu.dom.query('img'),function(item){
+    if(/eiv.baidu.com\/hmt\/icon/.test(baidu.dom.getAttr(item, 'src'))){
+      item.style.display = 'none';
+    }
+  });
+});
+}();
+!function(){    require.async(['common:widget/hunter/hunter.js'],
+  function (mod) {
+    if (location.search.indexOf('hunterrandom=0') >= 0) {
+      // url的search中有 hunterrandom=0 则忽略限流
+      mod.init(73791);
+    } else if (parseInt(Math.random().toString().slice(2)) % 10 === 0) {
+      // 限制流量，只传10%的统计量
+      mod.init(73791);
+    }
+  }
+);
+}();
+!function(){        $(function() {
+  alog('speed.set', 'drt', +new Date);
+});
 
-<script crossorigin="anonymous" integrity="sha256-Sxs+Reu4luxVVaYLalcHLGmPG0uGt2qgtP4QZ/RAsfM=" src="https://assets-cdn.github.com/assets/frameworks-4b1b3e45ebb896ec5555a60b6a57072c698f1b4b86b76aa0b4fe1067f440b1f3.js"></script>
+  window.alogObjectConfig = {
+    product: '107',
+    page: 'newspc_107',
 
-<script async="async" crossorigin="anonymous" integrity="sha256-VwuLlgXAnUjpmdO+ThQ9FrjxCTXzOAUhDbv0jRB2hbA=" src="https://assets-cdn.github.com/assets/github-570b8b9605c09d48e999d3be4e143d16b8f10935f33805210dbbf48d107685b0.js"></script>
+    // 性能
+    speed: {
+      sample: '0.15'
+    },
 
+    // js异常
+    exception: {
+      sample: '0.08'
+    },
 
+    // 新特性
+    feature: {
+      sample: '0.08'
+    },
 
-
-<div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
-    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
-    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
-    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
-</div>
-<div class="facebox" id="facebox" style="display:none;">
-    <div class="facebox-popup">
-        <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
-        </div>
-        <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
-            <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
-        </button>
-    </div>
-</div>
-
-
-</body>
-</html>
-
+    csp: {
+      sample: '0.15',
+      'default-src': [
+        {match: '*bae.baidu.com', target: 'Accept,Warn'},
+        {match: '*.baidu.com,*.bdstatic.com,*.bdimg.com,localhost,*.hao123.com,*.hao123img.com', target: 'Accept'},
+        {match: /^(127|172|192|10)(\.\d+){3}$/, target: 'Accept'},
+        {match: '*', target: 'Accept,Warn'}
+      ]
+    }
+  };
+  void function(a,b,c,d,e,f){function g(b){a.attachEvent?a.attachEvent("onload",b,!1):a.addEventListener&&a.addEventListener("load",b)}function h(a,c,d){d=d||15;var e=new Date;e.setTime((new Date).getTime()+1e3*d),b.cookie=a+"="+escape(c)+";path=/;expires="+e.toGMTString()}function i(a){var c=b.cookie.match(new RegExp("(^| )"+a+"=([^;]*)(;|$)"));return null!=c?unescape(c[2]):null}function j(){var a=i("PMS_JT");if(a){h("PMS_JT","",-1);try{a=a.match(/{["']s["']:(\d+),["']r["']:["']([\s\S]+)["']}/),a=a&&a[1]&&a[2]?{s:parseInt(a[1]),r:a[2]}:{}}catch(c){a={}}a.r&&b.referrer.replace(/#.*/,"")!=a.r||alog("speed.set","wt",a.s)}}if(a.alogObjectConfig){var k=a.alogObjectConfig.sample,l=a.alogObjectConfig.rand;d="https:"===a.location.protocol?"https://fex.bdstatic.com"+d:"http://fex.bdstatic.com"+d,k&&l&&l>k||(g(function(){alog("speed.set","lt",+new Date),e=b.createElement(c),e.async=!0,e.src=d+"?v="+~(new Date/864e5)+~(new Date/864e5),f=b.getElementsByTagName(c)[0],f.parentNode.insertBefore(e,f)}),j())}}(window,document,"script","/hunter/alog/dp.min.js");
+}();
+!function(){        $.ready(function() {
+  alog('speed.set', 'drt', +new Date);
+});
+}();</script></html>

@@ -2,6 +2,7 @@
  * Created by fed on 2017/9/1.
  */
 const fs = require('fs');
+const querystring = require('querystring');
 const path = require('path');
 const koa = require('koa');
 const bodyParser = require('koa-body');
@@ -45,20 +46,20 @@ app.use(bodyParser({
   multipart: true,
 }));
 
-function* render(content) {
+function* render(content, options) {
   const browser = yield getBrowser();
   const page = yield browser.newPage();
   refCount++;
   yield page.goto('about:blank');
   yield Promise.all([page.setContent(content), page.waitForNavigation({ waitUntil: 'load' })]);
   this.type = 'application/pdf';
-  this.body = yield page.pdf({ format: 'A4' });
+  this.body = yield page.pdf({ format: 'A4', landscape: !!options.landscape });
   page.close();
   refCount--;
 }
 
 router.post('/', function *(next) {
-  const { no_redirect } = this.request.query;
+  const { no_redirect, landscape } = this.request.query;
   const content = this.request.body.content || this.request.body.fields ? this.request.body.fields.content: defaultContent;
   if (no_redirect) {
     yield* render.call(this, content);
@@ -67,18 +68,21 @@ router.post('/', function *(next) {
   render.call(this, content)
   const id = cacheIdGenerator(content);
   yield write(path.join(cacheDir, id), content);
-  this.redirect('/cache?id=' + id);
+  this.redirect('/cache?' + querystring.stringify({
+      id,
+      landscape,
+    }));
 }).get('/', function *(next) {
   yield* render.call(this, defaultContent);
 }).get('/cache', function* (next) {
-  const { id } = this.request.query;
+  const { id, landscape } = this.request.query;
   let content;
   try {
     content = yield read(path.join(cacheDir, id), 'utf8');
   } catch (e) {
     content = errorContent;
   }
-  yield* render.call(this, content);
+  yield* render.call(this, content, { landscape });
 });
 
 
