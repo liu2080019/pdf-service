@@ -46,7 +46,7 @@ app.use(bodyParser({
   multipart: true,
 }));
 
-function* render(content, options) {
+function* render(content, options = {}) {
   const browser = yield getBrowser();
   const page = yield browser.newPage();
   refCount++;
